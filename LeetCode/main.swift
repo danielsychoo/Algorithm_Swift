@@ -45,9 +45,63 @@ let output = 1
 
 // MARK: - My Solution
 
+/*
+ Runtime: 160ms(40.43%)
+ Memory: 14.5MB(96.81%)
+ */
 func singleNumber(_ nums: [Int]) -> Int {
+    let sortedNums = nums.sorted() /// 소팅 못 없애누..?
+    
+    var index = 0
+    while index < sortedNums.count {
+        if index == sortedNums.count-1 || sortedNums[index] != sortedNums[index+1] {
+            return sortedNums[index]
+        }
+        
+        index += 2
+    }
+    
     return 0
 }
+
+/*
+ Runtime: 275ms(5.85%)
+ Memory: 15MB(16.84%)
+ */
+// func singleNumber(_ nums: [Int]) -> Int {
+//     var memo: [Int] = []
+//
+//     for (index, num) in nums.enumerated() {
+//         if memo.contains(num) {
+//             continue
+//         }
+//
+//         if nums.lastIndex(of: num) == index {
+//             return num
+//         } else {
+//             memo.append(num)
+//         }
+//     }
+//
+//     return 0
+// }
+
+/*
+ Runtime: 352ms(5.14%)
+ Memory: 14.9MB(50.00%)
+ */
+// func singleNumber(_ nums: [Int]) -> Int {
+//     for index in 0...nums.count-1 {
+//         let pointValue = nums[index]
+//
+//         if nums.filter({ $0 == pointValue }).count == 1 { /// for loop 내부의 filter라 시간이 2중으로 드는 듯
+//             return pointValue
+//         }
+//
+//     }
+//
+//     return 0
+// }
 
 
 // MARK: - Play
