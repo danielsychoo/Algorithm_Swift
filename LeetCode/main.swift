@@ -31,12 +31,12 @@
 // MARK: - Inputs
 
 // example 1
-let nums = [2,2,1]
-let output = 1
+// let nums = [2,2,1]
+// let output = 1
 
 // example 2
-// let nums = [4,1,2,1,2]
-// let output = 4
+let nums = [4,1,2,1,2]
+let output = 4
 
 // example 3
 // let nums = [1]
@@ -49,20 +49,20 @@ let output = 1
  Runtime: 160ms(40.43%)
  Memory: 14.5MB(96.81%)
  */
-func singleNumber(_ nums: [Int]) -> Int {
-    let sortedNums = nums.sorted() /// 소팅 못 없애누..?
-    
-    var index = 0
-    while index < sortedNums.count {
-        if index == sortedNums.count-1 || sortedNums[index] != sortedNums[index+1] {
-            return sortedNums[index]
-        }
-        
-        index += 2
-    }
-    
-    return 0
-}
+// func singleNumber(_ nums: [Int]) -> Int {
+//     let sortedNums = nums.sorted() /// 소팅 못 없애누..?
+//
+//     var index = 0
+//     while index < sortedNums.count {
+//         if index == sortedNums.count-1 || sortedNums[index] != sortedNums[index+1] {
+//             return sortedNums[index]
+//         }
+//
+//         index += 2
+//     }
+//
+//     return 0
+// }
 
 /*
  Runtime: 275ms(5.85%)
@@ -112,3 +112,8 @@ print("result :", result)
 
 // MARK: - Best practice
 
+func singleNumber(_ nums: [Int]) -> Int {
+    var ans = 0
+    for num in nums { ans ^= num } //???????? 이게뭔데
+    return ans
+}
