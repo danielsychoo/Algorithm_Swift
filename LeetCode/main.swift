@@ -112,8 +112,26 @@ print("result :", result)
 
 // MARK: - Best practice
 
+/*
+ - 주석[1]
+ (`^` XOR 비트 연산 -- https://han.gl/nHbOg)
+ 
+ 0 : 0      0      0  (첫 비교값)
+ 
+ 4 : 1      0      0  (input 배열)
+ 1 : 0      0      1
+ 2 : 0      1      0
+ 1 : 0      0      1
+ 2 : 0      1      0
+ --------------------
+ 4 : 1      0      0 (결과값)
+  (홀수개) (짝수개) (짝수개)
+ */
+
 func singleNumber(_ nums: [Int]) -> Int {
+    
     var ans = 0
-    for num in nums { ans ^= num } //???????? 이게뭔데
+    for num in nums { ans ^= num } /// 주석[1]
     return ans
+    
 }
