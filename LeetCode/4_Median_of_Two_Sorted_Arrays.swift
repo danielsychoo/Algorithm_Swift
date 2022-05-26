@@ -1,7 +1,4 @@
 //
-//  main.swift
-//  Algorithm_Swift
-//
 //  Created by sungyeopTW on 2022/05/19.
 //
 
