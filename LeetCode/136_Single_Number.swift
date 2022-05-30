@@ -90,7 +90,7 @@
 // func singleNumber(_ nums: [Int]) -> Int {
 //     for index in 0...nums.count-1 {
 //         let pointValue = nums[index]
-//
+// 
 //         if nums.filter({ $0 == pointValue }).count == 1 { /// for loop 내부의 filter라 시간이 2중으로 드는 듯
 //             return pointValue
 //         }
