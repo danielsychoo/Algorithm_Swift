@@ -35,14 +35,14 @@
 // let output = true
 
 // example 2
-let pushed = [1,2,3,4,5]
-let popped = [4,3,5,1,2]
-let output = false
+// let pushed = [1,2,3,4,5]
+// let popped = [4,3,5,1,2]
+// let output = false
 
 // example 3
-// let pushed = [2,1,0]
-// let popped = [1,2,0]
-// let output = true
+let pushed = [2,1,0]
+let popped = [1,2,0]
+let output = true
 
 
 // MARK: - My Solution
@@ -51,32 +51,32 @@ let output = false
  Runtime: 47ms(66.67%)
  Memory: 13.9MB(66.67%)
  */
-func validateStackSequences(_ pushed: [Int], _ popped: [Int]) -> Bool {
-    var stack: [Int] = []
-    var poppedIndex = 0
-
-    for pushedItem in pushed {
-        if pushedItem == popped[poppedIndex] { /// 같으면 상쇄 (push됐다가 pop)
-            poppedIndex += 1
-        } else {
-            stack.append(pushedItem)
-        }
-        
-        var canPop = stack.count != 0
-            ? stack[stack.count - 1] == popped[poppedIndex]
-            : false
-        
-        while canPop { /// pop이 가능한동안 pop 진행
-            stack.remove(at: stack.count - 1)
-            poppedIndex += 1
-            canPop = stack.count != 0
-                ? stack[stack.count - 1] == popped[poppedIndex]
-                : false
-        }
-    }
-
-    return stack.isEmpty ? true : false
-}
+// func validateStackSequences(_ pushed: [Int], _ popped: [Int]) -> Bool {
+//     var stack: [Int] = []
+//     var poppedIndex = 0
+//
+//     for pushedItem in pushed {
+//         if pushedItem == popped[poppedIndex] { /// 같으면 상쇄 (push됐다가 pop)
+//             poppedIndex += 1
+//         } else {
+//             stack.append(pushedItem)
+//         }
+//
+//         var canPop = !stack.isEmpty
+//             ? stack.last == popped[poppedIndex]
+//             : false
+//
+//         while canPop { /// pop이 가능한동안 pop 진행
+//             stack.remove(at: stack.count - 1)
+//             poppedIndex += 1
+//             canPop = !stack.isEmpty
+//                 ? stack.last == popped[poppedIndex]
+//                 : false
+//         }
+//     }
+//
+//     return stack.isEmpty ? true : false
+// }
 
 
 // MARK: - Play
@@ -86,3 +86,16 @@ print("result :", result)
 
 
 // MARK: - Best practice
+
+func validateStackSequences(_ pushed: [Int], _ popped: [Int]) -> Bool {
+    var arr: [Int] = [], idx = 0
+
+    for n in pushed {
+        arr.append(n)
+        while arr.count > 0, idx < popped.count, arr.last! == popped[idx] {
+            idx += 1
+            arr.removeLast()
+        }
+    }
+    return idx == popped.count
+}
