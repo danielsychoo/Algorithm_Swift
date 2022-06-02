@@ -67,7 +67,8 @@
 //             : false
 //
 //         while canPop { /// pop이 가능한동안 pop 진행
-//             stack.remove(at: stack.count - 1)
+//             // stack.remove(at: stack.count - 1) /// TODO: BLOG
+//             stack.removeLast()
 //             poppedIndex += 1
 //             canPop = !stack.isEmpty
 //                 ? stack.last == popped[poppedIndex]
