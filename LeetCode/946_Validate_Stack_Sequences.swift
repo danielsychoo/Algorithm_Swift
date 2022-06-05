@@ -51,6 +51,7 @@
  Runtime: 47ms(66.67%)
  Memory: 13.9MB(66.67%)
  */
+
 // func validateStackSequences(_ pushed: [Int], _ popped: [Int]) -> Bool {
 //     var stack: [Int] = []
 //     var poppedIndex = 0
