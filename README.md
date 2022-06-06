@@ -7,4 +7,5 @@
 - [4. Median of Two Sorted Arrays](/LeetCode/4_Median_of_Two_Sorted_Arrays.swift)
 - [136. Single Number](/LeetCode/136_Single_Number.swift)
 - [946. Validate Stack Sequences](/LeetCode/946_Validate_Stack_Sequences.swift)
-- [2027. Minimum Moves to Convert String](/LeetCode/main.swift)
+- [2027. Minimum Moves to Convert String](/LeetCode/2027_Minimum_Moves_to_Convert_String.swift)
+- [279. Perfect Squares](/LeetCode/main.swift)
