@@ -44,16 +44,40 @@ let output = "11"
 // let nums = ["111","011","001"]
 // let output = "101"
 
+// example 4
+// let nums = ["0"]
+// let output = "1"
+
 
 // MARK: - My Solution
 
 /*
- Runtime:
- Memory:
+ Runtime: 13ms(33.33%)
+ Memory: 14.8MB(33.33%)
  */
+import Foundation
 
 func findDifferentBinaryString(_ nums: [String]) -> String {
-    return "0"
+    let count: Float = Float(nums.count)
+    let max: Int = Int(pow(count, 2)) - 1
+    
+    // EdgeCase
+    if nums.count == 1 {
+        switch nums[0] {
+        case "1":
+            return "0"
+        default:
+            return "1"
+        }
+    }
+
+    for value in 0 ... max {
+        var bitValue = String(value, radix:2)
+        while bitValue.count < Int(count) { bitValue = "0" + bitValue }
+        if !nums.contains(bitValue) { return bitValue }
+    }
+
+    return ""
 }
 
 
