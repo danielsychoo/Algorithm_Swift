@@ -8,82 +8,59 @@
 // MARK: - Description
 
 /*
- 1980. Find Unique Binary String
+ 1017. Convert to Base -2
  
- Given an array of strings nums containing n unique binary strings each of length n, return a binary string of length n that does not appear in nums. If there are multiple answers, you may return any of them.
- 각각 길이가 n인 n개의 고유한 이진 문자열을 포함하는 문자열 nums의 배열이 주어지면 nums에 나타나지 않는 길이가 n인 이진 문자열을 반환합니다. 답변이 여러 개인 경우 그 중 아무 것도 반환할 수 있습니다.
+ Given an integer n, return a binary string representing its representation in base -2.
+ Note that the returned string should not have leading zeros unless the string is "0".
+ 정수 n이 주어지면 기본 -2로 표현을 나타내는 이진 문자열을 반환합니다. 문자열이 "0"이 아니면 반환된 문자열에 선행 0이 없어야 합니다.
 
  Example 1:
- Input: nums = ["01","10"]
- Output: "11"
- Explanation: "11" does not appear in nums. "00" would also be correct.
+ Input: n = 2
+ Output: "110"
+ Explantion: (-2)2 + (-2)1 = 2
  
  Example 2:
- Input: nums = ["00","01"]
- Output: "11"
- Explanation: "11" does not appear in nums. "10" would also be correct.
+ Input: n = 3
+ Output: "111"
+ Explantion: (-2)2 + (-2)1 + (-2)0 = 3
  
  Example 3:
- Input: nums = ["111","011","001"]
- Output: "101"
- Explanation: "101" does not appear in nums. "000", "010", "100", and "110" would also be correct.
+ Input: n = 4
+ Output: "100"
+ Explantion: (-2)2 = 4
 */
 
 
 // MARK: - Inputs
 
 // example 1
-let nums = ["01","10"]
-let output = "11"
+let n = 2
+let output = "110"
 
 // example 2
-// let nums = ["00","01"]
-// let output = "11"
+// let n = 3
+// let output = "111"
 
 // example 3
-// let nums = ["111","011","001"]
-// let output = "101"
-
-// example 4
-// let nums = ["0"]
-// let output = "1"
+// let n = 4
+// let output = "100"
 
 
 // MARK: - My Solution
 
 /*
- Runtime: 13ms(33.33%)
- Memory: 14.8MB(33.33%)
+ Runtime:
+ Memory:
  */
-import Foundation
 
-func findDifferentBinaryString(_ nums: [String]) -> String {
-    let count: Float = Float(nums.count)
-    let max: Int = Int(pow(count, 2)) - 1
-    
-    // EdgeCase
-    if nums.count == 1 {
-        switch nums[0] {
-        case "1":
-            return "0"
-        default:
-            return "1"
-        }
-    }
-
-    for value in 0 ... max {
-        var bitValue = String(value, radix:2)
-        while bitValue.count < Int(count) { bitValue = "0" + bitValue }
-        if !nums.contains(bitValue) { return bitValue }
-    }
-
+func baseNeg2(_ n: Int) -> String {
     return ""
 }
 
 
 // MARK: - Play
 
-let result = findDifferentBinaryString(nums) == output
+let result = baseNeg2(n) == output
 print("result :", result)
 
 
