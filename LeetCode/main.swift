@@ -1,94 +1,67 @@
 //
-//  Created by sungyeopTW on 2022/06/06.
+//  main.swift
+//  Algorithm_Swift
 //
-
-import Darwin
-
+//  Created by sungyeopTW on 2022/06/21.
+//
 
 // MARK: - Description
 
 /*
- 9. Palindrome Number
+ 1980. Find Unique Binary String
  
- Given an integer x, return true if x is palindrome integer.
- An integer is a palindrome when it reads the same backward as forward.
-
- For example, 121 is a palindrome while 123 is not.
+ Given an array of strings nums containing n unique binary strings each of length n, return a binary string of length n that does not appear in nums. If there are multiple answers, you may return any of them.
+ 각각 길이가 n인 n개의 고유한 이진 문자열을 포함하는 문자열 nums의 배열이 주어지면 nums에 나타나지 않는 길이가 n인 이진 문자열을 반환합니다. 답변이 여러 개인 경우 그 중 아무 것도 반환할 수 있습니다.
 
  Example 1:
- Input: x = 121
- Output: true
- Explanation: 121 reads as 121 from left to right and from right to left.
+ Input: nums = ["01","10"]
+ Output: "11"
+ Explanation: "11" does not appear in nums. "00" would also be correct.
  
  Example 2:
- Input: x = -121
- Output: false
- Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+ Input: nums = ["00","01"]
+ Output: "11"
+ Explanation: "11" does not appear in nums. "10" would also be correct.
  
  Example 3:
- Input: x = 10
- Output: false
- Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+ Input: nums = ["111","011","001"]
+ Output: "101"
+ Explanation: "101" does not appear in nums. "000", "010", "100", and "110" would also be correct.
 */
 
 
 // MARK: - Inputs
 
 // example 1
-let x = 121
-let output = true
+let nums = ["01","10"]
+let output = "11"
 
 // example 2
-// let x = -121
-// let output = false
+// let nums = ["00","01"]
+// let output = "11"
 
 // example 3
-// let x = 10
-// let output = false
+// let nums = ["111","011","001"]
+// let output = "101"
 
 
 // MARK: - My Solution
 
 /*
- Runtime: 52ms(64.15%)
- Memory: 13.9MB (70.89%)
+ Runtime:
+ Memory:
  */
 
-// func isPalindrome(_ x: Int) -> Bool {
-//
-//     let arr = Array(String(x))
-//     var left = 0
-//     var right = arr.count - 1
-//
-//     while left < right {
-//         if arr[left] != arr[right] { return false }
-//
-//         left += 1
-//         right -= 1
-//     }
-//
-//     return true
-// }
+func findDifferentBinaryString(_ nums: [String]) -> String {
+    return "0"
+}
 
 
 // MARK: - Play
 
-// let result = isPalindrome(x) == output
-// print("result :", result)
+let result = findDifferentBinaryString(nums) == output
+print("result :", result)
 
 
 // MARK: - Best practice
 
-// func isPalindrome(_ x: Int) -> Bool {
-//     return x < 0 ? false : method(x: x) == x /// 음수면 `-` 붙으므로 무조건 false
-// }
-// private func method(x: Int) -> Int {
-//     var r = 0
-//     var x = x
-//     while x != 0 {
-//         r = r * 10
-//         r = r + x % 10
-//         x /= 10
-//     }
-//     return (r < Int32.min || r > Int32.max) ? 0 : r
-// }
