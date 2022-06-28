@@ -2,48 +2,36 @@
 //  main.swift
 //  Algorithm_Swift
 //
-//  Created by sungyeopTW on 2022/06/21.
+//  Created by sungyeopTW on 2022/06/28.
 //
 
 // MARK: - Description
 
 /*
- 1017. Convert to Base -2
+ 1232. Check If It Is a Straight Line
  
- Given an integer n, return a binary string representing its representation in base -2.
- Note that the returned string should not have leading zeros unless the string is "0".
- 정수 n이 주어지면 기본 -2로 표현을 나타내는 이진 문자열을 반환합니다. 문자열이 "0"이 아니면 반환된 문자열에 선행 0이 없어야 합니다.
+ You are given an array coordinates, coordinates[i] = [x, y], where [x, y] represents the coordinate of a point. Check if these points make a straight line in the XY plane.
+ 배열 좌표(좌표[i] = [x, y])가 제공되며 여기서 [x, y]는 점의 좌표를 나타냅니다. 이 점이 XY 평면에서 직선을 이루는지 확인하세요.
 
  Example 1:
- Input: n = 2
- Output: "110"
- Explantion: (-2)2 + (-2)1 = 2
+ Input: coordinates = [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]
+ Output: true
  
  Example 2:
- Input: n = 3
- Output: "111"
- Explantion: (-2)2 + (-2)1 + (-2)0 = 3
- 
- Example 3:
- Input: n = 4
- Output: "100"
- Explantion: (-2)2 = 4
+ Input: coordinates = [[1,1],[2,2],[3,4],[4,5],[5,6],[7,7]]
+ Output: false
 */
 
 
 // MARK: - Inputs
 
 // example 1
-let n = 2
-let output = "110"
+let coordinates = [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]
+let output = true
 
 // example 2
-// let n = 3
-// let output = "111"
-
-// example 3
-// let n = 4
-// let output = "100"
+// let coordinates = [[1,1],[2,2],[3,4],[4,5],[5,6],[7,7]]
+// let output = false
 
 
 // MARK: - My Solution
@@ -53,52 +41,15 @@ let output = "110"
  Memory:
  */
 
-/*
-    0    0    0    0    0    0    0    0  |  0
-  --------------------------------------------
-  -128  64   -32   16  -8    4   -2    1  |  0
-        64 -(4배)- 16  -8 -(4배)- -2
- 
- -- 각 양수와 음수는 `4배`씩의 간격
- -- 시작점은 양수(1) 음수(-2)
- -- 0은 edge
- 
- 1. n과 같거나 n보다 큰 양수 찾고
- 2. 해당 양수와 n의 차이만큼을 음수에서 찾으면 ?
- */
-
-/*
- let n = 2
- let output = "110"
- */
-
-// func baseNeg2(_ n: Int) -> String {
-// }
+func checkStraightLine(_ coordinates: [[Int]]) -> Bool {
+    return true
+}
 
 
 // MARK: - Play
 
-let result = baseNeg2(n) == output
+let result = checkStraightLine(coordinates) == output
 print("result :", result)
 
 
 // MARK: - Best practice
-
-/*
- 2진수와 -2진수는
- 
- 3을 예로 들 경우
- s : 10101010101010101010101010101010
- n :                               11 (2진수 3)
-   ----------------------------------- +
-     10101010101010101010101010101101
- s : 10101010101010101010101010101010
-   ----------------------------------- ^
-                                  111 (-2진수 3)
- */
-
-func baseNeg2(_ n: Int) -> String {
-    let s = 0xAAAAAAAA /// 10101010101010101010101010101010 (0 <= n <= 10의 9승 범위 모두 포함)
-    
-    return String((n + s) ^ s, radix: 2)
-}
