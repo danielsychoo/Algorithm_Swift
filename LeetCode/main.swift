@@ -61,11 +61,42 @@ let output = 0
  */
 
 /*
-
+ 1. 첫 번째 index부터 두 배열의 값이 같은지 확인
+ 2. 다르면 sandwiches[0]과 같은 값이 나올 때 까지 students의 위치를 넘김
+ 3. 같으면 다를 때 까지 상쇄
+ 4. 다시 2의 과정 ㄱㄱ
+ 5. 결국 남은 students의 수를 반환
  */
 
 func countStudents(_ students: [Int], _ sandwiches: [Int]) -> Int {
-    return 0
+    var studentList = students
+    var sandwichList = sandwiches
+    
+    var remain = students.count
+    var rollCount = 0
+    
+    while true {
+        if studentList[0] == sandwichList[0] {
+            rollCount = 0
+            pickSandwich(&studentList, &sandwichList)
+            remain -= 1
+        } else {
+            rollStudents(&studentList)
+            rollCount += 1
+        }
+        
+        if remain == 0 || rollCount > remain { return remain } // 탈출조건
+    }
+}
+
+func pickSandwich(_ studentList: inout [Int], _ sandwichList: inout [Int]) { // 상쇄
+    studentList.remove(at: 0)
+    sandwichList.remove(at: 0)
+}
+
+func rollStudents(_ studentList: inout [Int]) { // 돌림
+    studentList.append(studentList[0])
+    studentList.remove(at: 0)
 }
 
 
