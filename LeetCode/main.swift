@@ -8,37 +8,43 @@
 // MARK: - Description
 
 /*
- 676. Implement Magic Dictionary
+ 1252. Cells with Odd Values in a Matrix
  
- Design a data structure that is initialized with a list of different words. Provided a string, you should determine if you can change exactly one character in this string to match any word in the data structure.
+ There is an m x n matrix that is initialized to all 0's. There is also a 2D array indices where each indices[i] = [ri, ci] represents a 0-indexed location to perform some increment operations on the matrix.
 
- Implement the MagicDictionary class:
- - MagicDictionary() Initializes the object.
- - void buildDict(String[] dictionary) Sets the data structure with an array of distinct strings dictionary.
- - bool search(String searchWord) Returns true if you can change exactly one character in searchWord to match any string in the data structure, otherwise returns false.
+ For each location indices[i], do both of the following:
+
+ Increment all the cells on row ri.
+ Increment all the cells on column ci.
+ Given m, n, and indices, return the number of odd-valued cells in the matrix after applying the increment to all locations in indices.
 
  Example 1:
- Input
- ["MagicDictionary", "buildDict", "search", "search", "search", "search"]
- [[], [["hello", "leetcode"]], ["hello"], ["hhllo"], ["hell"], ["leetcoded"]]
- Output
- [null, null, false, true, false, false]
+ Input: m = 2, n = 3, indices = [[0,1],[1,1]]
+ Output: 6
+ Explanation: Initial matrix = [[0,0,0],[0,0,0]].
+ After applying first increment it becomes [[1,2,1],[0,1,0]].
+ The final matrix is [[1,3,1],[1,3,1]], which contains 6 odd numbers.
  
- Explanation
- MagicDictionary magicDictionary = new MagicDictionary();
- magicDictionary.buildDict(["hello", "leetcode"]);
- magicDictionary.search("hello"); // return False
- magicDictionary.search("hhllo"); // We can change the second 'h' to 'e' to match "hello" so we return True
- magicDictionary.search("hell"); // return False
- magicDictionary.search("leetcoded"); // return False
+ Example 2:
+ Input: m = 2, n = 2, indices = [[1,1],[0,0]]
+ Output: 0
+ Explanation: Final matrix = [[2,2],[2,2]]. There are no odd numbers in the final matrix.
 */
 
 
 // MARK: - Inputs
 
 // example 1
-// let coordinates = [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]]
-// let output = true
+let m = 2
+let n = 3
+let indices = [[0,1],[1,1]]
+let output = 6
+
+// example 2
+// let m = 2
+// let n = 2
+// let indices = [[1,1],[0,0]]
+// let output = 6
 
 
 // MARK: - My Solution
@@ -48,12 +54,16 @@
  Memory:
  */
 
+func oddCells(_ m: Int, _ n: Int, _ indices: [[Int]]) -> Int {
+    return 0
+}
+
 
 
 // MARK: - Play
 
-// let result = checkStraightLine(coordinates) == output
-// print("result :", result)
+let result = oddCells(m, n, indices) == output
+print("result :", result)
 
 
 // MARK: - Best practice

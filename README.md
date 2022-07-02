@@ -12,4 +12,4 @@
 - [1232. Check If It Is a Straight Line](/LeetCode/1232_Check_If_It_Is_a_Straight_Line.swift)
 - [1980. Find Unique Binary String](/LeetCode/1980_Find_Unique_Binary_String.swift)
 - [2027. Minimum Moves to Convert String](/LeetCode/2027_Minimum_Moves_to_Convert_String.swift)
-- [676. Implement Magic Dictionary](/LeetCode/main.swift)
+- [1252. Cells with Odd Values in a Matrix](/LeetCode/main.swift)
