@@ -50,14 +50,39 @@ let output = 6
 // MARK: - My Solution
 
 /*
- Runtime:
- Memory:
+ Runtime: 17ms(25.00%)
+ Memory: 13.6MB(100.00%)
+ */
+
+/*
+ 1. n x m 크기의 matrix만들고 0으로 채움
+ 2. indices에 맞추어 1씩 크기증가
+ 3. 전체 돌며 홀수의 갯수 확인 후 리턴
  */
 
 func oddCells(_ m: Int, _ n: Int, _ indices: [[Int]]) -> Int {
-    return 0
+    let inner = [Int](repeating: 0, count: n)
+    var matrix = [[Int]](repeating: inner, count: m)
+    
+    for item in indices {
+        let r = item[0]
+        let c = item[1]
+        
+        matrix[r] = matrix[r].map { $0 + 1 }
+        
+        for i in 0 ..< matrix.count {
+            matrix[i][c] += 1
+        }
+    }
+    
+    var result = 0
+    
+    for item in matrix {
+        result += item.filter { $0 % 2 != 0 }.count
+    }
+    
+    return result
 }
-
 
 
 // MARK: - Play
