@@ -2,92 +2,76 @@
 //  main.swift
 //  Algorithm_Swift
 //
-//  Created by sungyeopTW on 2022/06/29.
+//  Created by sungyeopTW on 2022/07/02.
 //
 
 // MARK: - Description
 
 /*
- 1252. Cells with Odd Values in a Matrix
+ 1700. Number of Students Unable to Eat Lunch
  
- There is an m x n matrix that is initialized to all 0's. There is also a 2D array indices where each indices[i] = [ri, ci] represents a 0-indexed location to perform some increment operations on the matrix.
+ The school cafeteria offers circular and square sandwiches at lunch break, referred to by numbers 0 and 1 respectively. All students stand in a queue. Each student either prefers square or circular sandwiches.
 
- For each location indices[i], do both of the following:
+ The number of sandwiches in the cafeteria is equal to the number of students. The sandwiches are placed in a stack. At each step:
 
- Increment all the cells on row ri.
- Increment all the cells on column ci.
- Given m, n, and indices, return the number of odd-valued cells in the matrix after applying the increment to all locations in indices.
+ If the student at the front of the queue prefers the sandwich on the top of the stack, they will take it and leave the queue.
+ Otherwise, they will leave it and go to the queue's end.
+ This continues until none of the queue students want to take the top sandwich and are thus unable to eat.
 
+ You are given two integer arrays students and sandwiches where sandwiches[i] is the type of the i​​​​​​th sandwich in the stack (i = 0 is the top of the stack) and students[j] is the preference of the j​​​​​​th student in the initial queue (j = 0 is the front of the queue). Return the number of students that are unable to eat.
+ 
  Example 1:
- Input: m = 2, n = 3, indices = [[0,1],[1,1]]
- Output: 6
- Explanation: Initial matrix = [[0,0,0],[0,0,0]].
- After applying first increment it becomes [[1,2,1],[0,1,0]].
- The final matrix is [[1,3,1],[1,3,1]], which contains 6 odd numbers.
+ Input: students = [1,1,0,0], sandwiches = [0,1,0,1]
+ Output: 0
+ Explanation:
+ - Front student leaves the top sandwich and returns to the end of the line making students = [1,0,0,1].
+ - Front student leaves the top sandwich and returns to the end of the line making students = [0,0,1,1].
+ - Front student takes the top sandwich and leaves the line making students = [0,1,1] and sandwiches = [1,0,1].
+ - Front student leaves the top sandwich and returns to the end of the line making students = [1,1,0].
+ - Front student takes the top sandwich and leaves the line making students = [1,0] and sandwiches = [0,1].
+ - Front student leaves the top sandwich and returns to the end of the line making students = [0,1].
+ - Front student takes the top sandwich and leaves the line making students = [1] and sandwiches = [1].
+ - Front student takes the top sandwich and leaves the line making students = [] and sandwiches = [].
+ Hence all students are able to eat.
  
  Example 2:
- Input: m = 2, n = 2, indices = [[1,1],[0,0]]
- Output: 0
- Explanation: Final matrix = [[2,2],[2,2]]. There are no odd numbers in the final matrix.
-*/
+ Input: students = [1,1,1,0,0,1], sandwiches = [1,0,0,0,1,1]
+ Output: 3
+ */
 
 
 // MARK: - Inputs
 
 // example 1
-let m = 2
-let n = 3
-let indices = [[0,1],[1,1]]
-let output = 6
+let students = [1, 1, 0, 0]
+let sandwiches = [0, 1, 0, 1]
+let output = 0
 
 // example 2
-// let m = 2
-// let n = 2
-// let indices = [[1,1],[0,0]]
-// let output = 6
+// let students = [1, 1, 1, 0, 0, 1]
+// let sandwiches = [1, 0, 0, 0, 1, 1]
+// let output = 3
 
 
 // MARK: - My Solution
 
 /*
- Runtime: 17ms(25.00%)
- Memory: 13.6MB(100.00%)
+ Runtime:
+ Memory:
  */
 
 /*
- 1. n x m 크기의 matrix만들고 0으로 채움
- 2. indices에 맞추어 1씩 크기증가
- 3. 전체 돌며 홀수의 갯수 확인 후 리턴
+
  */
 
-func oddCells(_ m: Int, _ n: Int, _ indices: [[Int]]) -> Int {
-    let inner = [Int](repeating: 0, count: n)
-    var matrix = [[Int]](repeating: inner, count: m)
-    
-    for item in indices {
-        let r = item[0]
-        let c = item[1]
-        
-        matrix[r] = matrix[r].map { $0 + 1 }
-        
-        for i in 0 ..< matrix.count {
-            matrix[i][c] += 1
-        }
-    }
-    
-    var result = 0
-    
-    for item in matrix {
-        result += item.filter { $0 % 2 != 0 }.count
-    }
-    
-    return result
+func countStudents(_ students: [Int], _ sandwiches: [Int]) -> Int {
+    return 0
 }
 
 
 // MARK: - Play
 
-let result = oddCells(m, n, indices) == output
+let result = countStudents(students, sandwiches) == output
 print("result :", result)
 
 
