@@ -29,12 +29,12 @@
 // MARK: - Inputs
 
 // example 1
-let nums = [2,4,1,1,6,5]
-let output = 3
+// let nums = [2,4,1,1,6,5]
+// let output = 3
 
 // example 2
-// let nums = [6,6,5,5,4,1]
-// let output = 0
+let nums = [6,6,5,5,4,1]
+let output = 0
 
 
 // MARK: - My Solution
@@ -43,7 +43,39 @@ let output = 3
  */
 
 func countHillValley(_ nums: [Int]) -> Int {
-    return 0
+    var result = 0
+    var keep = ""
+    
+    for i in 1 ..< nums.count - 1 {
+        let left = nums[i - 1]
+        let current = nums[i]
+        let right = nums[i + 1]
+        
+        if left < current {
+            if current > right { result += 1 }
+            if current == right { keep = "up" }
+        }
+        else if left > current {
+            if current < right { result += 1 }
+            if current == right { keep = "down" }
+        }
+        else if keep == "up" {
+            if current == right { continue }
+            if current > right {
+                result += 1
+                keep = ""
+            }
+        }
+        else if keep == "down" {
+            if current == right { continue }
+            if current < right {
+                result += 1
+                keep = ""
+            }
+        }
+    }
+    
+    return result
 }
 
 
