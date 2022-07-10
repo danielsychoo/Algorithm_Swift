@@ -8,31 +8,33 @@
 // MARK: - Description
 
 /*
- 67. Add Binary
+ 2210. Count Hills and Valleys in an Array
  
- Given two binary strings a and b, return their sum as a binary string.
+ You are given a 0-indexed integer array nums. An index i is part of a hill in nums if the closest non-equal neighbors of i are smaller than nums[i]. Similarly, an index i is part of a valley in nums if the closest non-equal neighbors of i are larger than nums[i]. Adjacent indices i and j are part of the same hill or valley if nums[i] == nums[j].
+
+ Note that for an index to be part of a hill or valley, it must have a non-equal neighbor on both the left and right of the index.
+
+ Return the number of hills and valleys in nums.
  
  Example 1:
- Input: a = "11", b = "1"
- Output: "100"
+ Input: nums = [2,4,1,1,6,5]
+ Output: 3
  
  Example 2:
- Input: a = "1010", b = "1011"
- Output: "10101"
+ Input: nums = [6,6,5,5,4,1]
+ Output: 0
  */
 
 
 // MARK: - Inputs
 
 // example 1
-let a = "11"
-let b = "1"
-let output = "100"
+let nums = [2,4,1,1,6,5]
+let output = 3
 
 // example 2
-// let a = "1010"
-// let b = "1011"
-// let output = "10101"
+// let nums = [6,6,5,5,4,1]
+// let output = 0
 
 
 // MARK: - My Solution
@@ -40,14 +42,14 @@ let output = "100"
 /*
  */
 
-func addBinary(_ a: String, _ b: String) -> String {
-    return ""
+func countHillValley(_ nums: [Int]) -> Int {
+    return 0
 }
 
 
 // MARK: - Play
 
-let result = addBinary(a, b) == output
+let result = countHillValley(nums) == output
 print("result :", result)
 
 
