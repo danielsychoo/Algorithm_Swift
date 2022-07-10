@@ -8,33 +8,33 @@
 // MARK: - Description
 
 /*
- 2210. Count Hills and Valleys in an Array
+ 67. Add Binary
  
- You are given a 0-indexed integer array nums. An index i is part of a hill in nums if the closest non-equal neighbors of i are smaller than nums[i]. Similarly, an index i is part of a valley in nums if the closest non-equal neighbors of i are larger than nums[i]. Adjacent indices i and j are part of the same hill or valley if nums[i] == nums[j].
-
- Note that for an index to be part of a hill or valley, it must have a non-equal neighbor on both the left and right of the index.
-
- Return the number of hills and valleys in nums.
+ Given two binary strings a and b, return their sum as a binary string.
  
  Example 1:
- Input: nums = [2,4,1,1,6,5]
- Output: 3
+ let a = "11"
+ let b = "1"
+ Output: "100"
  
  Example 2:
- Input: nums = [6,6,5,5,4,1]
- Output: 0
+ let a = "1010"
+ let b = "1011"
+ Output: "10101"
  */
 
 
 // MARK: - Inputs
 
 // example 1
-// let nums = [2,4,1,1,6,5]
-// let output = 3
+let a = "11"
+let b = "1"
+let output = "100"
 
 // example 2
-let nums = [6,6,5,5,4,1]
-let output = 0
+// let a = "1010"
+// let b = "1011"
+// let output = "10101"
 
 
 // MARK: - My Solution
@@ -42,48 +42,19 @@ let output = 0
 /*
  */
 
-func countHillValley(_ nums: [Int]) -> Int {
-    var result = 0
-    var keep = ""
-    
-    for i in 1 ..< nums.count - 1 {
-        let left = nums[i - 1]
-        let current = nums[i]
-        let right = nums[i + 1]
-        
-        if left < current {
-            if current > right { result += 1 }
-            if current == right { keep = "up" }
-        }
-        else if left > current {
-            if current < right { result += 1 }
-            if current == right { keep = "down" }
-        }
-        else if keep == "up" {
-            if current == right { continue }
-            if current > right {
-                result += 1
-                keep = ""
-            }
-        }
-        else if keep == "down" {
-            if current == right { continue }
-            if current < right {
-                result += 1
-                keep = ""
-            }
-        }
-    }
-    
-    return result
+func addBinary(_ a: String, _ b: String) -> String {
+    let intA = Int(a, radix: 2) ?? 0
+    let intB = Int(b, radix: 2) ?? 0
+    return String(intA + intB, radix: 2)
 }
 
 
 // MARK: - Play
 
-let result = countHillValley(nums) == output
+let result = addBinary(a, b) == output
 print("result :", result)
 
 
 // MARK: - Best practice
+
 

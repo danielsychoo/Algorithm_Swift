@@ -16,4 +16,5 @@
 - [1700. Number of Students Unable to Eat Lunch](/LeetCode/1700_Number_of_Students_Unable_to_Eat_Lunch.swift)
 - [1980. Find Unique Binary String](/LeetCode/1980_Find_Unique_Binary_String.swift)
 - [2027. Minimum Moves to Convert String](/LeetCode/2027_Minimum_Moves_to_Convert_String.swift)
-- [2210. Count Hills and Valleys in an Array](/LeetCode/main.swift)
+- [2210. Count Hills and Valleys in an Array](/LeetCode/2210_Count_Hills_and_Valleys_in_an_Array.swift)
+- [67. Add Binary](/LeetCode/main.swift)
