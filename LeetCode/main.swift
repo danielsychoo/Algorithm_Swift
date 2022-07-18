@@ -41,9 +41,9 @@
 // MARK: - Inputs
 
 // example 1
-let candies = [2,3,5,1,3]
-let extraCandies = 3
-let output = [true,true,true,false,true]
+// let candies = [2,3,5,1,3]
+// let extraCandies = 3
+// let output = [true,true,true,false,true]
 
 // example 2
 // let candies = [4,2,1,1,2]
@@ -51,18 +51,32 @@ let output = [true,true,true,false,true]
 // let output = [true,false,false,false,false]
 
 // example 3
-// let candies = [12,1,12]
-// let extraCandies = 10
-// let output = [true,false,true]
+let candies = [12,1,12]
+let extraCandies = 10
+let output = [true,false,true]
 
 
 // MARK: - My Solution
 
 /*
+ - candies 배열의 길이만큼의 아이들
+ - candies 배열의 각 값은 index번째 아이가 가진 사탕 수
+ - extraCandies는 내가 가진 여분의 사탕 수
+ 
+ - 반환할 result 배열의 길이는 candies.count
+ - extraCandies를 주었을 때 index번째 아이가 가장 사탕을 많이 가졌으면 true 아니면 false
  */
 
 func kidsWithCandies(_ candies: [Int], _ extraCandies: Int) -> [Bool] {
-    return [false]
+    var result: [Bool] = []
+    for item in candies {
+        let added = item + extraCandies
+        
+        if candies.filter { added < $0 }.isEmpty { result.append(true) }
+        else { result.append(false) }
+    }
+    
+    return result
 }
 
 
