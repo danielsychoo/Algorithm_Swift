@@ -8,47 +8,48 @@
 // MARK: - Description
 
 /*
- 1243. Array Transformation
+ 163. Missing Ranges
  
- Given an initial array arr, every day you produce a new array using the array of the previous day.
+ You are given an inclusive range [lower, upper] and a sorted unique integer array nums, where all elements are in the inclusive range.
 
- On the i-th day, you do the following operations on the array of day i-1 to produce the array of day i:
+ A number x is considered missing if x is in the range [lower, upper] and x is not in nums.
 
- If an element is smaller than both its left neighbor and its right neighbor, then this element is incremented.
- If an element is bigger than both its left neighbor and its right neighbor, then this element is decremented.
- The first and last elements never change.
- After some days, the array does not change. Return that final array.
+ Return the smallest sorted list of ranges that cover every missing number exactly. That is, no element of nums is in any of the ranges, and each missing number is in one of the ranges.
+
+ Each range [a,b] in the list should be output as:
+
+ "a->b" if a != b
+ "a" if a == b
  
  Example 1:
- Input: arr = [6,2,3,4]
- Output: [6,3,3,4]
- Explanation:
- On the first day, the array is changed from [6,2,3,4] to [6,3,3,4].
- No more operations can be done to this array.
+ Input: nums = [0,1,3,50,75], lower = 0, upper = 99
+ Output: ["2","4->49","51->74","76->99"]
+ Explanation: The ranges are:
+ [2,2] --> "2"
+ [4,49] --> "4->49"
+ [51,74] --> "51->74"
+ [76,99] --> "76->99"
  
  Example 2:
- Input: arr = [1,6,3,4,3,5]
- Output: [1,4,4,4,4,5]
- Explanation:
- On the first day, the array is changed from [1,6,3,4,3,5] to [1,5,4,3,4,5].
- On the second day, the array is changed from [1,5,4,3,4,5] to [1,4,4,4,4,5].
- No more operations can be done to this array.
+ Input: nums = [-1], lower = -1, upper = -1
+ Output: []
+ Explanation: There are no missing ranges since there are no missing numbers.
  */
 
 
 // MARK: - Inputs
 
 // example 1
-// let arr = [6,2,3,4]
-// let output = [6,3,3,4]
+let nums = [0,1,3,50,75]
+let lower = 0
+let upper = 99
+let output = ["2","4->49","51->74","76->99"]
 
 // example 2
-let arr = [1,6,3,4,3,5]
-let output = [1,4,4,4,4,5]
-
-// example 3
-// let arr = [2,1,2,1,1,2,2,1]
-// let output = [2,2,1,1,1,2,2,1]
+// let nums = [-1]
+// let lower = -1
+// let upper = -1
+// let output = []]
 
 
 // MARK: - My Solution
@@ -56,40 +57,17 @@ let output = [1,4,4,4,4,5]
 /*
  */
 
-func transformArray(_ arr: [Int]) -> [Int] {
-    var before: [Int] = []
-    var compare = arr
-    var current = arr
-    
-    let count = arr.count - 1
-    var i = 2
-    
-    while before != current {
-        before = current
-        compare = current
-        i = 2
-        
-        while i <= count {
-            let left = i - 2
-            let middle = i - 1
-            let right = i
-            
-            if compare[left] < compare[middle] && compare[right] < compare[middle] { current[middle] -= 1 }
-            else if compare[left] > compare[middle] && compare[right] > compare[middle] { current[middle] += 1 }
-            
-            i += 1
-        }
-    }
-    
-    return current
+func findMissingRanges(_ nums: [Int], _ lower: Int, _ upper: Int) -> [String] {
+    return []
 }
 
 
 // MARK: - Play
 
-let result = transformArray(arr) == output
+let result = findMissingRanges(nums, lower, upper) == output
 print("result :", result)
 
 
 // MARK: - Best practice
+
 
