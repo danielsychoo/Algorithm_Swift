@@ -39,12 +39,16 @@
 // MARK: - Inputs
 
 // example 1
-let arr = [6,2,3,4]
-let output = [6,3,3,4]
+// let arr = [6,2,3,4]
+// let output = [6,3,3,4]
 
 // example 2
-// let arr = [1,6,3,4,3,5]
-// let output = [1,4,4,4,4,5]
+let arr = [1,6,3,4,3,5]
+let output = [1,4,4,4,4,5]
+
+// example 3
+// let arr = [2,1,2,1,1,2,2,1]
+// let output = [2,2,1,1,1,2,2,1]
 
 
 // MARK: - My Solution
@@ -53,7 +57,31 @@ let output = [6,3,3,4]
  */
 
 func transformArray(_ arr: [Int]) -> [Int] {
-    return []
+    var before: [Int] = []
+    var compare = arr
+    var current = arr
+    
+    let count = arr.count - 1
+    var i = 2
+    
+    while before != current {
+        before = current
+        compare = current
+        i = 2
+        
+        while i <= count {
+            let left = i - 2
+            let middle = i - 1
+            let right = i
+            
+            if compare[left] < compare[middle] && compare[right] < compare[middle] { current[middle] -= 1 }
+            else if compare[left] > compare[middle] && compare[right] > compare[middle] { current[middle] += 1 }
+            
+            i += 1
+        }
+    }
+    
+    return current
 }
 
 
