@@ -50,11 +50,48 @@ let output = 34
 // MARK: - My Solution
 
 /*
+ 1. 우선 다 더하고 겹쳐지는더 낮은 면 2개씩 뺌
  */
 
 func surfaceArea(_ grid: [[Int]]) -> Int {
-    return 0
+    var count: Int = 0
+    
+    (0 ..< grid.count).forEach { row in
+        (0 ..< grid.count).forEach { column in
+            let current = grid[row][column]
+            
+            if grid[row][column] > 0 {
+                count += (current * 4) + 2
+            }
+            
+            if row > 0 {
+                let beforeRow = grid[row - 1][column]
+                count -= min(beforeRow, current) * 2
+            }
+            
+            if column > 0 {
+                let beforeColumn = grid[row][column-1]
+                count -= min(beforeColumn, current) * 2
+            }
+        }
+    }
+    
+    return count
 }
+
+// func surfaceArea(_ grid: [[Int]]) -> Int {
+//     var count: Int = 0
+//
+//     (0 ..< grid.count).forEach { row in
+//         (0 ..< grid.count).forEach { column in
+//             if grid[row][column] > 0 { count += 2 + (grid[row][column] * 4) }
+//             if row > 0 { count -= min(grid[row-1][column], grid[row][column]) * 2 }
+//             if column > 0 { count -= min(grid[row][column-1], grid[row][column]) * 2 }
+//         }
+//     }
+//
+//     return count
+// }
 
 
 // MARK: - Play
