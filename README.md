@@ -10,6 +10,7 @@
 - [13. Roman to Integer](/LeetCode/13_Roman_to_Integer.swift)
 - [67. Add Binary](/LeetCode/67_Add_Binary.swift)
 - [136. Single Number](/LeetCode/136_Single_Number.swift)
+- [892. Surface Area of 3D Shapes](/LeetCode/892_Surface_Area_of_3D_Shapes.swift)
 - [946. Validate Stack Sequences](/LeetCode/946_Validate_Stack_Sequences.swift)
 - [1017. Convert to Base -2](/LeetCode/1017_Convert_to_Base_-2.swift)
 - [1119. Remove Vowels from a String](/LeetCode/1119_Remove_Vowels_from_a_String.swift)
@@ -21,4 +22,4 @@
 - [1980. Find Unique Binary String](/LeetCode/1980_Find_Unique_Binary_String.swift)
 - [2027. Minimum Moves to Convert String](/LeetCode/2027_Minimum_Moves_to_Convert_String.swift)
 - [2210. Count Hills and Valleys in an Array](/LeetCode/2210_Count_Hills_and_Valleys_in_an_Array.swift)
-- [892. Surface Area of 3D Shapes](/LeetCode/main.swift)
+- [594. Longest Harmonious Subsequence](/LeetCode/main.swift)
