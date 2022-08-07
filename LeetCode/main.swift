@@ -43,7 +43,19 @@ let output = 3
  */
 
 func countOdds(_ low: Int, _ high: Int) -> Int {
-    return 0
+    // var count = 0
+    // for i in low ... high {
+    //     if i % 2 != 0 { result += 1 }
+    // }
+    var num = (low % 2 != 0) ? (low) : (low + 1)
+    var count = 0
+    
+    
+    while num <= high {
+        num += 2
+        count += 1
+    }
+    return count
 }
 
 
