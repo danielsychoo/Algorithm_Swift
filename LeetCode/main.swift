@@ -1,4 +1,4 @@
-//
+///
 //  main.swift
 //  Algorithm_Swift
 //
@@ -19,7 +19,6 @@
  Return the number of different integers after performing the replacement operations on word.
 
  Two integers are considered different if their decimal representations without any leading zeros are different.
-
 
  
  Example 1:
@@ -59,7 +58,28 @@ let output = 3
  */
 
 func numDifferentIntegers(_ word: String) -> Int {
-    return 0
+    var set = Set<String>()
+    var temp = ""
+    word.forEach {
+        if let number = Int(String($0)) {
+            if number == 0 {
+                if temp == "0" { return }
+                else { temp += String(number) }
+            } else {
+                if temp == "0" { temp = String(number) }
+                else { temp += String(number) }
+            }
+        } else {
+            if !temp.isEmpty {
+                set.insert(temp)
+                temp = ""
+            }
+        }
+    }
+    
+    if !temp.isEmpty { set.insert(temp) }
+    
+    return set.count
 }
 
 
