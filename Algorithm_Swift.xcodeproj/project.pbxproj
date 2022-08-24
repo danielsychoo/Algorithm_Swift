@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04068DFE28B5B8840078B252 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04068DFD28B5B8840078B252 /* main.swift */; };
+		04068DFE28B5B8840078B252 /* 349_Intersection_of_Two_Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04068DFD28B5B8840078B252 /* 349_Intersection_of_Two_Arrays.swift */; };
+		04068E0028B5C33B0078B252 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04068DFF28B5C33B0078B252 /* main.swift */; };
 		04090EB928614518006F099B /* 1980_Find_Unique_Binary_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04090EB828614518006F099B /* 1980_Find_Unique_Binary_String.swift */; };
 		04090EBB2861560A006F099B /* 1017_Convert_to_Base_-2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04090EBA2861560A006F099B /* 1017_Convert_to_Base_-2.swift */; };
 		0437FD75282CA5A30097C584 /* 1_two_sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437FD74282CA5A30097C584 /* 1_two_sum.swift */; };
@@ -46,7 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		04068DFD28B5B8840078B252 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		04068DFD28B5B8840078B252 /* 349_Intersection_of_Two_Arrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 349_Intersection_of_Two_Arrays.swift; sourceTree = "<group>"; };
+		04068DFF28B5C33B0078B252 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		04090EB828614518006F099B /* 1980_Find_Unique_Binary_String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1980_Find_Unique_Binary_String.swift; sourceTree = "<group>"; };
 		04090EBA2861560A006F099B /* 1017_Convert_to_Base_-2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1017_Convert_to_Base_-2.swift"; sourceTree = "<group>"; };
 		0437FD71282CA5A30097C584 /* Algorithm_Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm_Swift; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 				04BFACD82873B849000B66C0 /* 13_Roman_to_Integer.swift */,
 				04BC8CAE287AE2E10008F27D /* 67_Add_Binary.swift */,
 				04ED19A0283711D900F209C5 /* 136_Single_Number.swift */,
+				04068DFD28B5B8840078B252 /* 349_Intersection_of_Two_Arrays.swift */,
 				04EDC444289B59C700807C58 /* 594_Longest_Harmonious_Subsequence.swift */,
 				045E53D7288D4A900074BC56 /* 892_Surface_Area_of_3D_Shapes.swift */,
 				04EBE4E7283F12940031A308 /* 946_Validate_Stack_Sequences.swift */,
@@ -126,7 +129,7 @@
 				04090EB828614518006F099B /* 1980_Find_Unique_Binary_String.swift */,
 				04E6112B28459B5F006316AD /* 2027_Minimum_Moves_to_Convert_String.swift */,
 				04BC8CAC287ACE4A0008F27D /* 2210_Count_Hills_and_Valleys_in_an_Array.swift */,
-				04068DFD28B5B8840078B252 /* main.swift */,
+				04068DFF28B5C33B0078B252 /* main.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -191,7 +194,7 @@
 			files = (
 				0437FD7E282DE3710097C584 /* 3_Longest_substring_without_repeating_characters.swift in Sources */,
 				04BFACD92873B849000B66C0 /* 13_Roman_to_Integer.swift in Sources */,
-				04068DFE28B5B8840078B252 /* main.swift in Sources */,
+				04068DFE28B5B8840078B252 /* 349_Intersection_of_Two_Arrays.swift in Sources */,
 				04F9432028A0898B00682F80 /* 1805_Number_of_Different_Integers_in_a_String.swift in Sources */,
 				04FFA9C62884F9EC00EF7A87 /* 1431_Kids_With_the_Greatest_Number_of_Candies.swift in Sources */,
 				04FFA9C42884F58A00EF7A87 /* 1119_Remove_Vowels_from_a_String.swift in Sources */,
@@ -205,6 +208,7 @@
 				04E6112C28459B5F006316AD /* 2027_Minimum_Moves_to_Convert_String.swift in Sources */,
 				04E9CB992875044C00EADBF9 /* 12_Integer_to_Roman.swift in Sources */,
 				04B3C2C4286A865900EDC95E /* 1232_Check_If_It_Is_a_Straight_Line.swift in Sources */,
+				04068E0028B5C33B0078B252 /* main.swift in Sources */,
 				04BC8CAF287AE2E10008F27D /* 67_Add_Binary.swift in Sources */,
 				04B3C2D3286BDF8300EDC95E /* 1252_Cells_with_Odd_Values_in_a_Matrix.swift in Sources */,
 				04BC8CAD287ACE4A0008F27D /* 2210_Count_Hills_and_Valleys_in_an_Array.swift in Sources */,

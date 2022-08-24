@@ -10,6 +10,7 @@
 - [13. Roman to Integer](/LeetCode/13_Roman_to_Integer.swift)
 - [67. Add Binary](/LeetCode/67_Add_Binary.swift)
 - [136. Single Number](/LeetCode/136_Single_Number.swift)
+- [349. Intersection of Two Arrays](/LeetCode/349_Intersection_of_Two_Arrays.swift)
 - [594. Longest Harmonious Subsequence](/LeetCode/594_Longest_Harmonious_Subsequence.swift)
 - [892. Surface Area of 3D Shapes](/LeetCode/892_Surface_Area_of_3D_Shapes.swift)
 - [946. Validate Stack Sequences](/LeetCode/946_Validate_Stack_Sequences.swift)
@@ -25,4 +26,4 @@
 - [1980. Find Unique Binary String](/LeetCode/1980_Find_Unique_Binary_String.swift)
 - [2027. Minimum Moves to Convert String](/LeetCode/2027_Minimum_Moves_to_Convert_String.swift)
 - [2210. Count Hills and Valleys in an Array](/LeetCode/2210_Count_Hills_and_Valleys_in_an_Array.swift)
-- [349. Intersection of Two Arrays](/LeetCode/main.swift)
+- [1275. Find Winner on a Tic Tac Toe Game](/LeetCode/main.swift)
