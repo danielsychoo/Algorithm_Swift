@@ -27,14 +27,14 @@
 // MARK: - Inputs
 
 // example 1
-let nums1 = [1,2,2,1]
-let nums2 = [2,2]
-let output = [2]
+// let nums1 = [1,2,2,1]
+// let nums2 = [2,2]
+// let output = [2]
 
 // example 2
-// let nums1 = [4,9,5]
-// let nums2 = [9,4,9,8,4]
-// let output = [4,9]
+let nums1 = [4,9,5]
+let nums2 = [9,4,9,8,4]
+let output = [4,9]
 
 
 // MARK: - My Solution
@@ -43,7 +43,25 @@ let output = [2]
  */
 
 func intersection(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
-    return [0]
+    let set1 = Set(nums1)
+    let set2 = Set(nums2)
+    var result: [Int] = []
+    
+    if set1.count >= set2.count {
+        set2.forEach { item in
+            if let value = set1.first(where: { $0 == item }) {
+                result.append(value)
+            }
+        }
+    } else {
+        set1.forEach { item in
+            if let value = set2.first(where: { $0 == item }) {
+                result.append(value)
+            }
+        }
+    }
+    
+    return result
 }
 
 
