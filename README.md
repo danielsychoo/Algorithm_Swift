@@ -27,5 +27,6 @@
 - [1805. Number of Different Integers in a String](/LeetCode/1805_Number_of_Different_Integers_in_a_String.swift)
 - [1980. Find Unique Binary String](/LeetCode/1980_Find_Unique_Binary_String.swift)
 - [2027. Minimum Moves to Convert String](/LeetCode/2027_Minimum_Moves_to_Convert_String.swift)
+- [2068. Check Whether Two Strings are Almost Equivalent](/LeetCode/2068_Check_Whether_Two_Strings_are_Almost_Equivalent.swift)
 - [2210. Count Hills and Valleys in an Array](/LeetCode/2210_Count_Hills_and_Valleys_in_an_Array.swift)
-- [2068. Check Whether Two Strings are Almost Equivalent](/LeetCode/main.swift)
+- [191. Number of 1 Bits](/LeetCode/main.swift)
