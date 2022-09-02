@@ -41,15 +41,15 @@
 // MARK: - Inputs
 
 // example 1
-let n = 00000000000000000000000000001011
+let n = Int("00000000000000000000000000001011", radix: 2)!
 let output = 3
 
 // example 2
-// let n = 00000000000000000000000010000000
+// let n = Int("00000000000000000000000010000000", radix: 2)!
 // let output = 1
 
 // example 3
-// let n = 11111111111111111111111111111101
+// let n = Int("11111111111111111111111111111101", radix: 2)!
 // let output = 31
 
 
@@ -59,7 +59,8 @@ let output = 3
  */
 
 func hammingWeight(_ n: Int) -> Int {
-    return 0
+    let binary = String(n, radix: 2)
+    return binary.filter { $0 == "1" }.count
 }
 
 
