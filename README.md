@@ -30,4 +30,5 @@
 - [2027. Minimum Moves to Convert String](/LeetCode/2027_Minimum_Moves_to_Convert_String.swift)
 - [2068. Check Whether Two Strings are Almost Equivalent](/LeetCode/2068_Check_Whether_Two_Strings_are_Almost_Equivalent.swift)
 - [2210. Count Hills and Valleys in an Array](/LeetCode/2210_Count_Hills_and_Valleys_in_an_Array.swift)
-- [2239. Find Closest Number to Zero](/LeetCode/main.swift)
+- [2239. Find Closest Number to Zero](/LeetCode/2239_Find_Closest_Number_to_Zero.swift)
+- [1822. Sign of the Product of an Array](/LeetCode/main.swift)
