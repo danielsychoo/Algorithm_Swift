@@ -64,9 +64,25 @@
  * }
  */
 
-func leafSimilar(_ root1: TreeNode?, _ root2: TreeNode?) -> Bool {
-    
-}
+// func leafSimilar(_ root1: TreeNode?, _ root2: TreeNode?) -> Bool {
+//     var list1: [Int] = []
+//     getLeafVal(root1, &list1)
+//
+//     var list2: [Int] = []
+//     getLeafVal(root2, &list2)
+//
+//     return list1 == list2
+// }
+//
+// func getLeafVal(_ tree: TreeNode?, _ list: inout [Int]) {
+//     guard let tree = tree else { return }
+//
+//     if tree.left == nil && tree.right == nil { list.append(tree.val) }
+//     if tree.left != nil { getLeafVal(tree.left, &list) }
+//     if tree.right != nil { getLeafVal(tree.right, &list) }
+//
+//     return
+// }
 
 
 // MARK: - Play
