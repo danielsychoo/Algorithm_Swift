@@ -8,33 +8,33 @@
 // MARK: - Description
 
 /*
- 270. Closest Binary Search Tree Value
+ 104. Maximum Depth of Binary Tree
  
- Given the root of a binary search tree and a target value, return the value in the BST that is closest to the target.
+ Given the root of a binary tree, return its maximum depth.
+
+ A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
  
  ---
  
  Example 1:
- Input: root = [4,2,5,1,3], target = 3.714286
- Output: 4
+ Input: root = [3,9,20,null,null,15,7]
+ Output: 3
  
  Example 2:
- Input: root = [1], target = 4.428571
- Output: 1
+ Input: root = [1,null,2]
+ Output: 2
  */
 
 
 // MARK: - Inputs
 
 // example 1
-// let root = [4,2,5,1,3]
-// let target = 3.714286
-// let output = 4
+// let root = [3,9,20,null,null,15,7]
+// let output = 3
 
 // example 2
-// let root = [1]
-// let target = 4.428571
-// let output = 1
+// let root = [1,null,2]
+// let output = 2
 
 
 // MARK: - My Solution
@@ -58,19 +58,20 @@
  * }
  */
 
-func closestValue(_ root: TreeNode?, _ target: Double) -> Int {
-
-}
+// func maxDepth(_ root: TreeNode?) -> Int {
+//     guard let root = root else { return 0 }
+//
+//     return max(maxDepth(root.left), maxDepth(root.right)) + 1
+// }
 
 
 // MARK: - Play
 
-// let result = closestValue(root, target) == output
-// print("value:", closestValue(root, target))
+// let result = maxDepth(root) == output
+// print("value:", maxDepth(root))
 // print("result:", result)
 
 
 // MARK: - Best practice
-
 
 
