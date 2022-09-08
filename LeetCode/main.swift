@@ -58,9 +58,28 @@
  * }
  */
 
-func closestValue(_ root: TreeNode?, _ target: Double) -> Int {
-
-}
+// func closestValue(_ root: TreeNode?, _ target: Double) -> Int {
+//     var result = 99999
+//     move(root, target, &result)
+//
+//     return result
+// }
+//
+// func move(_ node: TreeNode?, _ target: Double, _ result: inout Int) {
+//     guard let node = node else { return }
+//
+//     result = findValue(target, node.val, result)
+//
+//     if node.left != nil { move(node.left, target, &result) }
+//     if node.right != nil { move(node.right, target, &result) }
+//
+//     return
+// }
+//
+// func findValue(_ target: Double, _ value: Int, _ result: Int) -> Int {
+//     if (abs(target - Double(value)) >= abs(target - Double(result))) { return result }
+//     else { return value }
+// }
 
 
 // MARK: - Play
