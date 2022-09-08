@@ -73,9 +73,9 @@
 // let output = [[1,4],[2,4],[3,4]]
 
 // example 3
-let items1 = [[1,3],[2,2]]
-let items2 = [[7,1],[2,2],[1,4]]
-let output = [[1,7],[2,4],[7,1]]
+// let items1 = [[1,3],[2,2]]
+// let items2 = [[7,1],[2,2],[1,4]]
+// let output = [[1,7],[2,4],[7,1]]
 
 
 // MARK: - My Solution
@@ -83,21 +83,21 @@ let output = [[1,7],[2,4],[7,1]]
 /*
  */
 
-func mergeSimilarItems(_ items1: [[Int]], _ items2: [[Int]]) -> [[Int]] {
-    var dict: [Int:Int] = [:]
-
-    items1.forEach { item in
-        if dict[item[0]] != nil { dict[item[0]]! += item[1] }
-        else { dict[item[0]] = item[1] }
-    }
-
-    items2.forEach { item in
-        if dict[item[0]] != nil { dict[item[0]]! += item[1] }
-        else { dict[item[0]] = item[1] }
-    }
-
-    return dict.keys.sorted().map { [$0, dict[$0]!] }
-}
+// func mergeSimilarItems(_ items1: [[Int]], _ items2: [[Int]]) -> [[Int]] {
+//     var dict: [Int:Int] = [:]
+//
+//     items1.forEach { item in
+//         if dict[item[0]] != nil { dict[item[0]]! += item[1] }
+//         else { dict[item[0]] = item[1] }
+//     }
+//
+//     items2.forEach { item in
+//         if dict[item[0]] != nil { dict[item[0]]! += item[1] }
+//         else { dict[item[0]] = item[1] }
+//     }
+//
+//     return dict.keys.sorted().map { [$0, dict[$0]!] }
+// }
 
 // func mergeSimilarItems(_ items1: [[Int]], _ items2: [[Int]]) -> [[Int]] {
 //     var dict: [Int:Int] = [:]
@@ -121,10 +121,9 @@ func mergeSimilarItems(_ items1: [[Int]], _ items2: [[Int]]) -> [[Int]] {
 
 // MARK: - Play
 
-let result = mergeSimilarItems(items1, items2) == output
-print("value:", mergeSimilarItems(items1, items2))
-print("result:", result)
+// let result = mergeSimilarItems(items1, items2) == output
+// print("value:", mergeSimilarItems(items1, items2))
+// print("result:", result)
 
 
 // MARK: - Best practice
-

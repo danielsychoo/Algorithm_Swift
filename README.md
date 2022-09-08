@@ -17,6 +17,7 @@
 - [349. Intersection of Two Arrays](/LeetCode/349_Intersection_of_Two_Arrays.swift)
 - [594. Longest Harmonious Subsequence](/LeetCode/594_Longest_Harmonious_Subsequence.swift)
 - [617. Merge Two Binary Trees](/LeetCode/617_Merge_Two_Binary_Trees.swift)
+- [872. Leaf-Similar Trees](/LeetCode/872_Leaf-Similar_Trees.swift)
 - [892. Surface Area of 3D Shapes](/LeetCode/892_Surface_Area_of_3D_Shapes.swift)
 - [946. Validate Stack Sequences](/LeetCode/946_Validate_Stack_Sequences.swift)
 - [1017. Convert to Base -2](/LeetCode/1017_Convert_to_Base_-2.swift)
@@ -35,4 +36,8 @@
 - [2068. Check Whether Two Strings are Almost Equivalent](/LeetCode/2068_Check_Whether_Two_Strings_are_Almost_Equivalent.swift)
 - [2210. Count Hills and Valleys in an Array](/LeetCode/2210_Count_Hills_and_Valleys_in_an_Array.swift)
 - [2239. Find Closest Number to Zero](/LeetCode/2239_Find_Closest_Number_to_Zero.swift)
-- [872. Leaf-Similar Trees](/LeetCode/main.swift)
+- [2363. Merge Similar Items](/LeetCode/2363_Merge_Similar_Items.swift)
+
+## Programmers
+
+- [성격 유형 검사하기 (Lv.1) -- 2022 KAKAO TECH INTERNSHIP](/Programmers/main.swift)
