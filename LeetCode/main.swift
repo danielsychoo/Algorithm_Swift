@@ -8,39 +8,64 @@
 // MARK: - Description
 
 /*
- 872. Leaf-Similar Trees
+ 2363. Merge Similar Items
  
- Consider all the leaves of a binary tree, from left to right order, the values of those leaves form a leaf value sequence.
- 
- For example, in the given tree above, the leaf value sequence is (6, 7, 4, 9, 8).
+ You are given two 2D integer arrays, items1 and items2, representing two sets of items. Each array items has the following properties:
 
- Two binary trees are considered leaf-similar if their leaf value sequence is the same.
+ items[i] = [valuei, weighti] where valuei represents the value and weighti represents the weight of the ith item.
+ The value of each item in items is unique.
+ Return a 2D integer array ret where ret[i] = [valuei, weighti], with weighti being the sum of weights of all items with value valuei.
 
- Return true if and only if the two given trees with head nodes root1 and root2 are leaf-similar.
+ Note: ret should be returned in ascending order by value.
  
  ---
  
  Example 1:
- Input: root1 = [3,5,1,6,2,9,8,null,null,7,4], root2 = [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]
- Output: true
+ Input: items1 = [[1,1],[4,5],[3,8]], items2 = [[3,1],[1,5]]
+ Output: [[1,6],[3,9],[4,5]]
+ Explanation:
+ The item with value = 1 occurs in items1 with weight = 1 and in items2 with weight = 5, total weight = 1 + 5 = 6.
+ The item with value = 3 occurs in items1 with weight = 8 and in items2 with weight = 1, total weight = 8 + 1 = 9.
+ The item with value = 4 occurs in items1 with weight = 5, total weight = 5.
+ Therefore, we return [[1,6],[3,9],[4,5]].
  
  Example 2:
- Input: root1 = [1,2,3], root2 = [1,3,2]
- Output: false
+ Input: items1 = [[1,1],[3,2],[2,3]], items2 = [[2,1],[3,2],[1,3]]
+ Output: [[1,4],[2,4],[3,4]]
+ Explanation:
+ The item with value = 1 occurs in items1 with weight = 1 and in items2 with weight = 3, total weight = 1 + 3 = 4.
+ The item with value = 2 occurs in items1 with weight = 3 and in items2 with weight = 1, total weight = 3 + 1 = 4.
+ The item with value = 3 occurs in items1 with weight = 2 and in items2 with weight = 2, total weight = 2 + 2 = 4.
+ Therefore, we return [[1,4],[2,4],[3,4]].
+ 
+ Example 3:
+ Input: items1 = [[1,3],[2,2]], items2 = [[7,1],[2,2],[1,4]]
+ Output: [[1,7],[2,4],[7,1]]
+ Explanation:
+ The item with value = 1 occurs in items1 with weight = 3 and in items2 with weight = 4, total weight = 3 + 4 = 7.
+ The item with value = 2 occurs in items1 with weight = 2 and in items2 with weight = 2, total weight = 2 + 2 = 4.
+ The item with value = 7 occurs in items2 with weight = 1, total weight = 1.
+ Therefore, we return [[1,7],[2,4],[7,1]].
  */
+
 
 
 // MARK: - Inputs
 
 // example 1
-// let root1 = [3,5,1,6,2,9,8,null,null,7,4]
-// let root2 = [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]
-// let output = true
+let items1 = [[1,1],[4,5],[3,8]]
+let items2 = [[3,1],[1,5]]
+let output = [[1,6],[3,9],[4,5]]
 
 // example 2
-// let root1 = [1,2,3]
-// let root2 = [1,3,2]
-// let output = false
+// let items1 = [[1,1],[3,2],[2,3]]
+// let items2 = [[2,1],[3,2],[1,3]]
+// let output = [[1,4],[2,4],[3,4]]
+
+// example 3
+// let items1 = [[1,3],[2,2]]
+// let items2 = [[7,1],[2,2],[1,4]]
+// let output = [[1,7],[2,4],[7,1]]
 
 
 // MARK: - My Solution
@@ -48,52 +73,17 @@
 /*
  */
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
-
-// func leafSimilar(_ root1: TreeNode?, _ root2: TreeNode?) -> Bool {
-//     var list1: [Int] = []
-//     getLeafVal(root1, &list1)
-//
-//     var list2: [Int] = []
-//     getLeafVal(root2, &list2)
-//
-//     return list1 == list2
-// }
-//
-// func getLeafVal(_ tree: TreeNode?, _ list: inout [Int]) {
-//     guard let tree = tree else { return }
-//
-//     if tree.left == nil && tree.right == nil { list.append(tree.val) }
-//     if tree.left != nil { getLeafVal(tree.left, &list) }
-//     if tree.right != nil { getLeafVal(tree.right, &list) }
-//
-//     return
-// }
+func mergeSimilarItems(_ items1: [[Int]], _ items2: [[Int]]) -> [[Int]] {
+ return [[0]]
+}
 
 
 // MARK: - Play
 
-// let result = leafSimilar(root, root2) == output
-// print("value:", leafSimilar(root, root2))
-// print("result:", result)
+let result = mergeSimilarItems(items1, items2) == output
+print("value:", mergeSimilarItems(items1, items2))
+print("result:", result)
 
 
 // MARK: - Best practice
-
-
-
 
