@@ -13,6 +13,7 @@
 - [111. Minimum Depth of Binary Tree](/LeetCode/111_Minimum_Depth_of_Binary_Tree.swift)
 - [136. Single Number](/LeetCode/136_Single_Number.swift)
 - [191. Number of 1 Bits](/LeetCode/191_Number_of_1_Bits.swift)
+- [270. Closest Binary Search Tree Value](/LeetCode/270_Closest_Binary_Search_Tree_Value.swift)
 - [349. Intersection of Two Arrays](/LeetCode/349_Intersection_of_Two_Arrays.swift)
 - [594. Longest Harmonious Subsequence](/LeetCode/594_Longest_Harmonious_Subsequence.swift)
 - [617. Merge Two Binary Trees](/LeetCode/617_Merge_Two_Binary_Trees.swift)
@@ -34,4 +35,4 @@
 - [2068. Check Whether Two Strings are Almost Equivalent](/LeetCode/2068_Check_Whether_Two_Strings_are_Almost_Equivalent.swift)
 - [2210. Count Hills and Valleys in an Array](/LeetCode/2210_Count_Hills_and_Valleys_in_an_Array.swift)
 - [2239. Find Closest Number to Zero](/LeetCode/2239_Find_Closest_Number_to_Zero.swift)
-- [270. Closest Binary Search Tree Value](/LeetCode/main.swift)
+- [872. Leaf-Similar Trees](/LeetCode/main.swift)
