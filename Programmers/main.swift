@@ -69,14 +69,14 @@
 // MARK: - Inputs
 
 // example 1
-let survey = ["AN", "CF", "MJ", "RT", "NA"]
-let choices = [5, 3, 2, 7, 5]
-let result = "TCMA"
+// let survey = ["AN", "CF", "MJ", "RT", "NA"]
+// let choices = [5, 3, 2, 7, 5]
+// let result = "TCMA"
 
 // example 2
-// let survey = ["TR", "RT", "TR"]
-// let choices = [7, 1, 3]
-// let result = "RCJA"
+let survey = ["TR", "RT", "TR"]
+let choices = [7, 1, 3]
+let result = "RCJA"
 
 
 // MARK: - My Solution
@@ -87,14 +87,63 @@ let result = "TCMA"
 import Foundation
 
 func solution(_ survey:[String], _ choices:[Int]) -> String {
-    return ""
+    
+    var pointTable: [String: Int] = [
+        "R": 0, "T": 0,
+        "C": 0, "F": 0,
+        "J": 0, "M": 0,
+        "A": 0, "N": 0
+    ]
+    setPoint(survey, choices, on: &pointTable)
+    
+    return getResult(from: pointTable)
+}
+
+func setPoint(_ survey: [String], _ choices: [Int], on table: inout [String: Int] ) {
+    
+    survey.enumerated().forEach { index, element in
+        let leftChar = String(element.first!), rightChar = String(element.last!)
+        let choice = choices[index]
+        
+        switch choice {
+        case 1:
+            table[leftChar]! += 3
+        case 2:
+            table[leftChar]! += 2
+        case 3:
+            table[leftChar]! += 1
+        case 5:
+            table[rightChar]! += 1
+        case 6:
+            table[rightChar]! += 2
+        case 7:
+            table[rightChar]! += 3
+        default:
+            break
+        }
+    }
+}
+
+func getResult(from pointTable: [String: Int]) -> String {
+    
+    let choiceTable: [[String]] = [
+        ["R", "T"], ["C", "F"],
+        ["J", "M"], ["A", "N"]
+    ]
+    
+    let resultArr = choiceTable.map { tuple -> String in
+        let leftChar = tuple.first!, rightChar = tuple.last!
+        return (pointTable[leftChar]! >= pointTable[rightChar]!) ? leftChar : rightChar
+    }
+    
+    return resultArr.joined()
 }
 
 
 // MARK: - Play
 
 let output = solution(survey, choices) == result
-print("value:", solution(survey, choices))
+// print("value:", solution(survey, choices))
 print("output:", output)
 
 
