@@ -8,35 +8,36 @@
 // MARK: - Description
 
 /*
- 두 큐 합 같게 만들기 (Lv.1) -- 2022 KAKAO TECH INTERNSHIP
+ 등산코스 정하기 (Lv.3) -- 2022 KAKAO TECH INTERNSHIP
  
- 길이가 같은 두 개의 큐가 주어집니다.
- 하나의 큐를 골라 원소를 추출(pop)하고, 추출된 원소를 다른 큐에 집어넣는(insert) 작업을 통해 각 큐의 원소 합이 같도록 만들려고 합니다.
- 이때 필요한 작업의 최소 횟수를 구하고자 합니다.
- 한 번의 pop과 한 번의 insert를 합쳐서 작업을 1회 수행한 것으로 간주합니다.
+ XX산은 n개의 지점으로 이루어져 있습니다. 각 지점은 1부터 n까지 번호가 붙어있으며, 출입구, 쉼터, 혹은 산봉우리입니다.
+ 각 지점은 양방향 통행이 가능한 등산로로 연결되어 있으며, 서로 다른 지점을 이동할 때 이 등산로를 이용해야 합니다.
+ 이때, 등산로별로 이동하는데 일정 시간이 소요됩니다.
 
- 큐는 먼저 집어넣은 원소가 먼저 나오는 구조입니다.
- 이 문제에서는 큐를 배열로 표현하며, 원소가 배열 앞쪽에 있을수록 먼저 집어넣은 원소임을 의미합니다.
- 즉, pop을 하면 배열의 첫 번째 원소가 추출되며, insert를 하면 배열의 끝에 원소가 추가됩니다.
- 예를 들어 큐 [1, 2, 3, 4]가 주어졌을 때, pop을 하면 맨 앞에 있는 원소 1이 추출되어 [2, 3, 4]가 되며, 이어서 5를 insert하면 [2, 3, 4, 5]가 됩니다.
+ 등산코스는 방문할 지점 번호들을 순서대로 나열하여 표현할 수 있습니다.
+ 예를 들어 1-2-3-2-1 으로 표현하는 등산코스는 1번지점에서 출발하여 2번, 3번, 2번, 1번 지점을 순서대로 방문한다는 뜻입니다.
+ 등산코스를 따라 이동하는 중 쉼터 혹은 산봉우리를 방문할 때마다 휴식을 취할 수 있으며, 휴식 없이 이동해야 하는 시간 중 가장 긴 시간을 해당 등산코스의 intensity라고 부르기로 합니다.
 
- 다음은 두 큐를 나타내는 예시입니다.
+ 당신은 XX산의 출입구 중 한 곳에서 출발하여 산봉우리 중 한 곳만 방문한 뒤 다시 원래의 출입구로 돌아오는 등산코스를 정하려고 합니다.
+ 다시 말해, 등산코스에서 출입구는 처음과 끝에 한 번씩, 산봉우리는 한 번만 포함되어야 합니다.
+ 당신은 이러한 규칙을 지키면서 intensity가 최소가 되도록 등산코스를 정하려고 합니다.
+
+ 다음은 XX산의 지점과 등산로를 그림으로 표현한 예시입니다.
+ - 위 그림에서 원에 적힌 숫자는 지점의 번호를 나타내며, 1, 3번 지점에 출입구, 5번 지점에 산봉우리가 있습니다.
+   각 선분은 등산로를 나타내며, 각 선분에 적힌 수는 이동 시간을 나타냅니다. 예를 들어 1번 지점에서 2번 지점으로 이동할 때는 3시간이 소요됩니다.
  
- queue1 = [3, 2, 7, 2]
- queue2 = [4, 6, 5, 1]
+ 위의 예시에서 `1-2-5-4-3` 과 같은 등산코스는 처음 출발한 원래의 출입구로 돌아오지 않기 때문에 잘못된 등산코스입니다.
+ 또한 `1-2-5-6-4-3-2-1` 과 같은 등산코스는 코스의 처음과 끝 외에 3번 출입구를 방문하기 때문에 잘못된 등산코스입니다.
  
- 두 큐에 담긴 모든 원소의 합은 30입니다. 따라서, 각 큐의 합을 15로 만들어야 합니다.
- 예를 들어, 다음과 같이 2가지 방법이 있습니다.
-
- 1. queue2의 4, 6, 5를 순서대로 추출하여 queue1에 추가한 뒤, queue1의 3, 2, 7, 2를 순서대로 추출하여 queue2에 추가합니다.
-    그 결과 queue1은 [4, 6, 5], queue2는 [1, 3, 2, 7, 2]가 되며, 각 큐의 원소 합은 15로 같습니다. 이 방법은 작업을 7번 수행합니다.
- 2. queue1에서 3을 추출하여 queue2에 추가합니다. 그리고 queue2에서 4를 추출하여 queue1에 추가합니다.
-    그 결과 queue1은 [2, 7, 2, 4], queue2는 [6, 5, 1, 3]가 되며, 각 큐의 원소 합은 15로 같습니다. 이 방법은 작업을 2번만 수행하며, 이보다 적은 횟수로 목표를 달성할 수 없습니다.
-    따라서 각 큐의 원소 합을 같게 만들기 위해 필요한 작업의 최소 횟수는 2입니다.
-
- 길이가 같은 두 개의 큐를 나타내는 정수 배열 queue1, queue2가 매개변수로 주어집니다.
- 각 큐의 원소 합을 같게 만들기 위해 필요한 작업의 최소 횟수를 return 하도록 solution 함수를 완성해주세요.
- 단, 어떤 방법으로도 각 큐의 원소 합을 같게 만들 수 없는 경우, -1을 return 해주세요.
+ 등산코스를 `3-2-5-4-3` 과 같이 정했을 때의 이동경로를 그림으로 나타내면 아래와 같습니다.
+ 이때, 휴식 없이 이동해야 하는 시간 중 가장 긴 시간은 5시간입니다. 따라서 이 등산코스의 intensity는 5입니다.
+ 
+ 등산코스를 1-2-4-5-6-4-2-1 과 같이 정했을 때의 이동경로를 그림으로 나타내면 아래와 같습니다.
+ 이때, 휴식 없이 이동해야 하는 시간 중 가장 긴 시간은 3시간입니다. 따라서 이 등산코스의 intensity는 3이며, 이 보다 intensity가 낮은 등산코스는 없습니다.
+ 
+ XX산의 지점 수 n, 각 등산로의 정보를 담은 2차원 정수 배열 paths, 출입구들의 번호가 담긴 정수 배열 gates, 산봉우리들의 번호가 담긴 정수 배열 summits가 매개변수로 주어집니다.
+ 이때, intensity가 최소가 되는 등산코스에 포함된 산봉우리 번호와 intensity의 최솟값을 차례대로 정수 배열에 담아 return 하도록 solution 함수를 완성해주세요.
+ intensity가 최소가 되는 등산코스가 여러 개라면 그중 산봉우리의 번호가 가장 낮은 등산코스를 선택합니다.
  */
 
 
@@ -44,70 +45,49 @@
 // MARK: - Inputs
 
 // example 1
-// let queue1 = [3, 2, 7, 2]
-// let queue2 = [4, 6, 5, 1]
-// let result = 2
+let n = 6
+let paths = [[1, 2, 3], [2, 3, 5], [2, 4, 2], [2, 5, 4], [3, 4, 4], [4, 5, 3], [4, 6, 1], [5, 6, 1]]
+let gates = [1, 3]
+let summits = [5]
+let result = [5, 3]
 
 // example 2
-// let queue1 = [1, 2, 1, 2]
-// let queue2 = [1, 10, 1, 2]
-// let result = 7
+// let n = 7
+// let paths = [[1, 4, 4], [1, 6, 1], [1, 7, 3], [2, 5, 2], [3, 7, 4], [5, 6, 6]]
+// let gates = [1]
+// let summits = [2, 3, 4]
+// let result = [3, 4]
 
 // example 3
-// let queue1 = [1, 1]
-// let queue2 = [1, 5]
-// let result = -1
+// let n = 7
+// let paths = [[1, 2, 5], [1, 4, 1], [2, 3, 1], [2, 6, 7], [4, 5, 1], [5, 6, 1], [6, 7, 1]]
+// let gates = [3, 7]
+// let summits = [1, 5]
+// let result = [5, 1]
 
 // example 4
-let queue1: [Int] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 10]
-let queue2: [Int] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-let result = -1
+// let n = 5
+// let paths = [[1, 3, 10], [1, 4, 20], [2, 3, 4], [2, 4, 6], [3, 5, 20], [4, 5, 6]]
+// let gates = [1, 2]
+// let summits = [5]
+// let result = [5, 6]
 
 
 // MARK: - My Solution
 
 /*
- 1. 각 queue의 합을 더하고, 그 둘을 더해 총계를 구함
- 2. 두 queue 중 값이 더 큰 queue에서 pop하고 다른 queue에 insert함
- 3. 두 합이 같아질 때 까지 2번을 진행
- 4. 이때, 진행의 횟수가 두 queue의 count를 넘어가면 -1 반환
  */
 
 import Foundation
 
-func solution(_ queue1:[Int], _ queue2:[Int]) -> Int {
-    
-    var count = 0, max = queue1.count * 3
-    var queue1 = queue1, queue2 = queue2
-    var val1 = queue1.reduce(0) { $0 + $1 }, val2 = queue2.reduce(0) { $0 + $1 }
-    var pointer1 = 0, pointer2 = 0
-    
-    while count < max {
-        
-        if val1 > val2 { /// queue1이 더 큰 상황
-            val1 -= queue1[pointer1]
-            val2 += queue1[pointer1]
-            queue2.append(queue1[pointer1])
-            pointer1 += 1
-        } else if val1 < val2 { /// queue2가 더 큰 상황
-            val2 -= queue2[pointer2]
-            val1 += queue2[pointer2]
-            queue1.append(queue2[pointer2])
-            pointer2 += 1
-        } else { /// 둘이 같은 상황
-            return count
-        }
-    
-        count += 1
-    }
-    
-    return -1
+func solution(_ n:Int, _ paths:[[Int]], _ gates:[Int], _ summits:[Int]) -> [Int] {
+    return []
 }
 
 // MARK: - Play
 
-let output = solution(queue1, queue2) == result
-// print("value:", solution(queue1, queue2))
+let output = solution(n, paths, gates, summits) == result
+// print("value:", solution(n, paths, gates, summits))
 print("output:", output)
 
 

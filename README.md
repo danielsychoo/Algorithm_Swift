@@ -41,4 +41,5 @@
 ## Programmers
 
 - [성격 유형 검사하기 (Lv.1) -- 2022 KAKAO TECH INTERNSHIP](</Programmers/%EC%84%B1%EA%B2%A9_%EC%9C%A0%ED%98%95_%EA%B2%80%EC%82%AC%ED%95%98%EA%B8%B0_(Lv.1)_2022_KAKAO_TECH_INTERNSHIP.swift>)
-- [두 큐 합 같게 만들기 (Lv.1) -- 2022 KAKAO TECH INTERNSHIP](/Programmers/main.swift)
+- [두 큐 합 같게 만들기 (Lv.2) -- 2022 KAKAO TECH INTERNSHIP](</Programmers/%EB%91%90_%ED%81%90%20%ED%95%A9_%EA%B0%99%EA%B2%8C_%EB%A7%8C%EB%93%A4%EA%B8%B0_(Lv.2)_2022_KAKAO_TECH_INTERNSHIP.swift>)
+- [등산코스 정하기 (Lv.3) -- 2022 KAKAO TECH INTERNSHIP](/Programmers/main.swift)
