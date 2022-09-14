@@ -44,9 +44,9 @@
 // MARK: - Inputs
 
 // example 1
-let queue1 = [3, 2, 7, 2]
-let queue2 = [4, 6, 5, 1]
-let result = 2
+// let queue1 = [3, 2, 7, 2]
+// let queue2 = [4, 6, 5, 1]
+// let result = 2
 
 // example 2
 // let queue1 = [1, 2, 1, 2]
@@ -58,18 +58,51 @@ let result = 2
 // let queue2 = [1, 5]
 // let result = -1
 
+// example 4
+let queue1: [Int] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 10]
+let queue2: [Int] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+let result = -1
+
 
 // MARK: - My Solution
 
 /*
+ 1. 각 queue의 합을 더하고, 그 둘을 더해 총계를 구함
+ 2. 두 queue 중 값이 더 큰 queue에서 pop하고 다른 queue에 insert함
+ 3. 두 합이 같아질 때 까지 2번을 진행
+ 4. 이때, 진행의 횟수가 두 queue의 count를 넘어가면 -1 반환
  */
 
 import Foundation
 
 func solution(_ queue1:[Int], _ queue2:[Int]) -> Int {
-    return -2
+    
+    var count = 0, max = queue1.count * 3
+    var queue1 = queue1, queue2 = queue2
+    var val1 = queue1.reduce(0) { $0 + $1 }, val2 = queue2.reduce(0) { $0 + $1 }
+    var pointer1 = 0, pointer2 = 0
+    
+    while count < max {
+        
+        if val1 > val2 { /// queue1이 더 큰 상황
+            val1 -= queue1[pointer1]
+            val2 += queue1[pointer1]
+            queue2.append(queue1[pointer1])
+            pointer1 += 1
+        } else if val1 < val2 { /// queue2가 더 큰 상황
+            val2 -= queue2[pointer2]
+            val1 += queue2[pointer2]
+            queue1.append(queue2[pointer2])
+            pointer2 += 1
+        } else { /// 둘이 같은 상황
+            return count
+        }
+    
+        count += 1
+    }
+    
+    return -1
 }
-
 
 // MARK: - Play
 
