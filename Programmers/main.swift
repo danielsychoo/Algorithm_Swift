@@ -2,66 +2,41 @@
 //  main.swift
 //  Algorithm_Swift
 //
-//  Created by sungyeopTW on 2022/09/08.
+//  Created by sungyeopTW on 2022/09/14.
 //
 
 // MARK: - Description
 
 /*
- 성격 유형 검사하기 (Lv.1) -- 2022 KAKAO TECH INTERNSHIP
+ 두 큐 합 같게 만들기 (Lv.1) -- 2022 KAKAO TECH INTERNSHIP
  
- 나만의 카카오 성격 유형 검사지를 만들려고 합니다.
- 성격 유형 검사는 다음과 같은 4개 지표로 성격 유형을 구분합니다. 성격은 각 지표에서 두 유형 중 하나로 결정됩니다.
- 
- 지표 번호    성격 유형
- ----------------------------
- 1번 지표    라이언형(R), 튜브형(T)
- 2번 지표    콘형(C), 프로도형(F)
- 3번 지표    제이지형(J), 무지형(M)
- 4번 지표    어피치형(A), 네오형(N)
- 
- 4개의 지표가 있으므로 성격 유형은 총 16(=2 x 2 x 2 x 2)가지가 나올 수 있습니다. 예를 들어, "RFMN"이나 "TCMA"와 같은 성격 유형이 있습니다.
+ 길이가 같은 두 개의 큐가 주어집니다.
+ 하나의 큐를 골라 원소를 추출(pop)하고, 추출된 원소를 다른 큐에 집어넣는(insert) 작업을 통해 각 큐의 원소 합이 같도록 만들려고 합니다.
+ 이때 필요한 작업의 최소 횟수를 구하고자 합니다.
+ 한 번의 pop과 한 번의 insert를 합쳐서 작업을 1회 수행한 것으로 간주합니다.
 
- 검사지에는 총 n개의 질문이 있고, 각 질문에는 아래와 같은 7개의 선택지가 있습니다.
- 
- - 매우 비동의
- - 비동의
- - 약간 비동의
- - 모르겠음
- - 약간 동의
- - 동의
- - 매우 동의
- 
- 각 질문은 1가지 지표로 성격 유형 점수를 판단합니다.
+ 큐는 먼저 집어넣은 원소가 먼저 나오는 구조입니다.
+ 이 문제에서는 큐를 배열로 표현하며, 원소가 배열 앞쪽에 있을수록 먼저 집어넣은 원소임을 의미합니다.
+ 즉, pop을 하면 배열의 첫 번째 원소가 추출되며, insert를 하면 배열의 끝에 원소가 추가됩니다.
+ 예를 들어 큐 [1, 2, 3, 4]가 주어졌을 때, pop을 하면 맨 앞에 있는 원소 1이 추출되어 [2, 3, 4]가 되며, 이어서 5를 insert하면 [2, 3, 4, 5]가 됩니다.
 
- 예를 들어, 어떤 한 질문에서 4번 지표로 아래 표처럼 점수를 매길 수 있습니다.
+ 다음은 두 큐를 나타내는 예시입니다.
  
- 선택지        성격 유형 점수
- -----------------------
- 매우 비동의    네오형 3점
- 비동의        네오형 2점
- 약간 비동의    네오형 1점
- 모르겠음      어떤 성격 유형도 점수를 얻지 않습니다
- 약간 동의     어피치형 1점
- 동의         어피치형 2점
- 매우 동의     어피치형 3점
+ queue1 = [3, 2, 7, 2]
+ queue2 = [4, 6, 5, 1]
  
- 이때 검사자가 질문에서 `약간 동의` 선택지를 선택할 경우 어피치형(A) 성격 유형 1점을 받게 됩니다.
- 만약 검사자가 `매우 비동의` 선택지를 선택할 경우 네오형(N) 성격 유형 3점을 받게 됩니다.
+ 두 큐에 담긴 모든 원소의 합은 30입니다. 따라서, 각 큐의 합을 15로 만들어야 합니다.
+ 예를 들어, 다음과 같이 2가지 방법이 있습니다.
 
- 위 예시처럼 네오형이 비동의, 어피치형이 동의인 경우만 주어지지 않고, 질문에 따라 네오형이 동의, 어피치형이 비동의인 경우도 주어질 수 있습니다.
- 하지만 각 선택지는 고정적인 크기의 점수를 가지고 있습니다.
- 
- - `매우 동의`나 `매우 비동의` 선택지를 선택하면 3점을 얻습니다.
- - `동의`나 `비동의` 선택지를 선택하면 2점을 얻습니다.
- - `약간 동의`나 `약간 비동의` 선택지를 선택하면 1점을 얻습니다.
- - `모르겠음` 선택지를 선택하면 점수를 얻지 않습니다.
- 
- 검사 결과는 모든 질문의 성격 유형 점수를 더하여 각 지표에서 더 높은 점수를 받은 성격 유형이 검사자의 성격 유형이라고 판단합니다.
- 단, 하나의 지표에서 각 성격 유형 점수가 같으면, 두 성격 유형 중 사전 순으로 빠른 성격 유형을 검사자의 성격 유형이라고 판단합니다.
+ 1. queue2의 4, 6, 5를 순서대로 추출하여 queue1에 추가한 뒤, queue1의 3, 2, 7, 2를 순서대로 추출하여 queue2에 추가합니다.
+    그 결과 queue1은 [4, 6, 5], queue2는 [1, 3, 2, 7, 2]가 되며, 각 큐의 원소 합은 15로 같습니다. 이 방법은 작업을 7번 수행합니다.
+ 2. queue1에서 3을 추출하여 queue2에 추가합니다. 그리고 queue2에서 4를 추출하여 queue1에 추가합니다.
+    그 결과 queue1은 [2, 7, 2, 4], queue2는 [6, 5, 1, 3]가 되며, 각 큐의 원소 합은 15로 같습니다. 이 방법은 작업을 2번만 수행하며, 이보다 적은 횟수로 목표를 달성할 수 없습니다.
+    따라서 각 큐의 원소 합을 같게 만들기 위해 필요한 작업의 최소 횟수는 2입니다.
 
- 질문마다 판단하는 지표를 담은 1차원 문자열 배열 survey와 검사자가 각 질문마다 선택한 선택지를 담은 1차원 정수 배열 choices가 매개변수로 주어집니다.
- 이때, 검사자의 성격 유형 검사 결과를 지표 번호 순서대로 return 하도록 solution 함수를 완성해주세요.
+ 길이가 같은 두 개의 큐를 나타내는 정수 배열 queue1, queue2가 매개변수로 주어집니다.
+ 각 큐의 원소 합을 같게 만들기 위해 필요한 작업의 최소 횟수를 return 하도록 solution 함수를 완성해주세요.
+ 단, 어떤 방법으로도 각 큐의 원소 합을 같게 만들 수 없는 경우, -1을 return 해주세요.
  */
 
 
@@ -69,14 +44,19 @@
 // MARK: - Inputs
 
 // example 1
-// let survey = ["AN", "CF", "MJ", "RT", "NA"]
-// let choices = [5, 3, 2, 7, 5]
-// let result = "TCMA"
+let queue1 = [3, 2, 7, 2]
+let queue2 = [4, 6, 5, 1]
+let result = 2
 
 // example 2
-let survey = ["TR", "RT", "TR"]
-let choices = [7, 1, 3]
-let result = "RCJA"
+// let queue1 = [1, 2, 1, 2]
+// let queue2 = [1, 10, 1, 2]
+// let result = 7
+
+// example 3
+// let queue1 = [1, 1]
+// let queue2 = [1, 5]
+// let result = -1
 
 
 // MARK: - My Solution
@@ -86,67 +66,17 @@ let result = "RCJA"
 
 import Foundation
 
-func solution(_ survey:[String], _ choices:[Int]) -> String {
-    
-    var pointTable: [String: Int] = [
-        "R": 0, "T": 0,
-        "C": 0, "F": 0,
-        "J": 0, "M": 0,
-        "A": 0, "N": 0
-    ]
-    setPoint(survey, choices, on: &pointTable)
-    
-    return getResult(from: pointTable)
-}
-
-func setPoint(_ survey: [String], _ choices: [Int], on table: inout [String: Int] ) {
-    
-    survey.enumerated().forEach { index, element in
-        let leftChar = String(element.first!), rightChar = String(element.last!)
-        let choice = choices[index]
-        
-        switch choice {
-        case 1:
-            table[leftChar]! += 3
-        case 2:
-            table[leftChar]! += 2
-        case 3:
-            table[leftChar]! += 1
-        case 5:
-            table[rightChar]! += 1
-        case 6:
-            table[rightChar]! += 2
-        case 7:
-            table[rightChar]! += 3
-        default:
-            break
-        }
-    }
-}
-
-func getResult(from pointTable: [String: Int]) -> String {
-    
-    let choiceTable: [[String]] = [
-        ["R", "T"], ["C", "F"],
-        ["J", "M"], ["A", "N"]
-    ]
-    
-    let resultArr = choiceTable.map { tuple -> String in
-        let leftChar = tuple.first!, rightChar = tuple.last!
-        return (pointTable[leftChar]! >= pointTable[rightChar]!) ? leftChar : rightChar
-    }
-    
-    return resultArr.joined()
+func solution(_ queue1:[Int], _ queue2:[Int]) -> Int {
+    return -2
 }
 
 
 // MARK: - Play
 
-let output = solution(survey, choices) == result
-// print("value:", solution(survey, choices))
+let output = solution(queue1, queue2) == result
+// print("value:", solution(queue1, queue2))
 print("output:", output)
 
 
 // MARK: - Best practice
-
 
