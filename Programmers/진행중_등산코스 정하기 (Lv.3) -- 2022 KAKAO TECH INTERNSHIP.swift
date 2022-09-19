@@ -45,11 +45,11 @@
 // MARK: - Inputs
 
 // example 1
-let n = 6
-let paths = [[1, 2, 3], [2, 3, 5], [2, 4, 2], [2, 5, 4], [3, 4, 4], [4, 5, 3], [4, 6, 1], [5, 6, 1]]
-let gates = [1, 3]
-let summits = [5]
-let result = [5, 3]
+// let n = 6
+// let paths = [[1, 2, 3], [2, 3, 5], [2, 4, 2], [2, 5, 4], [3, 4, 4], [4, 5, 3], [4, 6, 1], [5, 6, 1]]
+// let gates = [1, 3]
+// let summits = [5]
+// let result = [5, 3]
 
 // example 2
 // let n = 7
@@ -78,17 +78,17 @@ let result = [5, 3]
 /*
  */
 
-import Foundation
-
-func solution(_ n:Int, _ paths:[[Int]], _ gates:[Int], _ summits:[Int]) -> [Int] {
-    return []
-}
+// import Foundation
+//
+// func solution(_ n:Int, _ paths:[[Int]], _ gates:[Int], _ summits:[Int]) -> [Int] {
+//     return []
+// }
 
 // MARK: - Play
 
-let output = solution(n, paths, gates, summits) == result
+// let output = solution(n, paths, gates, summits) == result
 // print("value:", solution(n, paths, gates, summits))
-print("output:", output)
+// print("output:", output)
 
 
 // MARK: - Best practice
