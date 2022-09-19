@@ -8,37 +8,33 @@
 // MARK: - Description
 
 /*
- 2229. Check if an Array Is Consecutive
+ 496. Next Greater Element I
  
- Given an integer array nums, return true if nums is consecutive, otherwise return false.
+ The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.
 
- An array is consecutive if it contains every number in the range [x, x + n - 1] (inclusive), where x is the minimum number in the array and n is the length of the array.
+ You are given two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2.
 
+ For each 0 <= i < nums1.length, find the index j such that nums1[i] == nums2[j] and determine the next greater element of nums2[j] in nums2.
+ If there is no next greater element, then the answer for this query is -1.
+
+ Return an array ans of length nums1.length such that ans[i] is the next greater element as described above.
+ 
  ---
  
  Example 1:
- Input: nums = [1,3,4,2]
- Output: true
- Explanation:
- The minimum value is 1 and the length of nums is 4.
- All of the values in the range [x, x + n - 1] = [1, 1 + 4 - 1] = [1, 4] = (1, 2, 3, 4) occur in nums.
- Therefore, nums is consecutive.
+ Input: nums1 = [4,1,2], nums2 = [1,3,4,2]
+ Output: [-1,3,-1]
+ Explanation: The next greater element for each value of nums1 is as follows:
+ - 4 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
+ - 1 is underlined in nums2 = [1,3,4,2]. The next greater element is 3.
+ - 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
  
  Example 2:
- Input: nums = [1,3]
- Output: false
- Explanation:
- The minimum value is 1 and the length of nums is 2.
- The value 2 in the range [x, x + n - 1] = [1, 1 + 2 - 1], = [1, 2] = (1, 2) does not occur in nums.
- Therefore, nums is not consecutive.
- 
- Example 3:
- Input: nums = [3,5,4]
- Output: true
- Explanation:
- The minimum value is 3 and the length of nums is 3.
- All of the values in the range [x, x + n - 1] = [3, 3 + 3 - 1] = [3, 5] = (3, 4, 5) occur in nums.
- Therefore, nums is consecutive.
+ Input: nums1 = [2,4], nums2 = [1,2,3,4]
+ Output: [3,-1]
+ Explanation: The next greater element for each value of nums1 is as follows:
+ - 2 is underlined in nums2 = [1,2,3,4]. The next greater element is 3.
+ - 4 is underlined in nums2 = [1,2,3,4]. There is no next greater element, so the answer is -1.
  */
 
 
@@ -46,16 +42,14 @@
 // MARK: - Inputs
 
 // example 1
-let nums = [1,3,4,2]
-let output = true
+let nums1 = [4,1,2]
+let nums2 = [1,3,4,2]
+let output = [-1,3,-1]
 
 // example 2
-// let nums = [1,3]
-// let output = false
-
-// example 3
-// let nums = [3,5,4]
-// let output = true
+// let nums1 = [2,4]
+// let nums2 = [1,2,3,4]
+// let output = [3,-1]
 
 
 // MARK: - My Solution
@@ -63,22 +57,16 @@ let output = true
 /*
  */
 
-func isConsecutive(_ nums: [Int]) -> Bool {
-    let sorted = nums.sorted()
-    for i in 1 ..< sorted.count {
-        if sorted[i] - sorted[i-1] != 1 { return false }
-    }
-    
-    return true
+func nextGreaterElement(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+    return []
 }
 
 
 // MARK: - Play
 
-let result = isConsecutive(nums) == output
-// print("value:", isConsecutive(nums))
+let result = nextGreaterElement(nums1, nums2) == output
+// print("value:", nextGreaterElement(nums1, nums2))
 print("result:", result)
 
 
 // MARK: - Best practice
-
