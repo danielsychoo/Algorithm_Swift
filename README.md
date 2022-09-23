@@ -15,6 +15,7 @@
 - [191. Number of 1 Bits](/LeetCode/191_Number_of_1_Bits.swift)
 - [270. Closest Binary Search Tree Value](/LeetCode/270_Closest_Binary_Search_Tree_Value.swift)
 - [349. Intersection of Two Arrays](/LeetCode/349_Intersection_of_Two_Arrays.swift)
+- [496. Next Greater Element I](/LeetCode/496_Next_Greater_Element_I.swift)
 - [594. Longest Harmonious Subsequence](/LeetCode/594_Longest_Harmonious_Subsequence.swift)
 - [617. Merge Two Binary Trees](/LeetCode/617_Merge_Two_Binary_Trees.swift)
 - [872. Leaf-Similar Trees](/LeetCode/872_Leaf-Similar_Trees.swift)
@@ -38,7 +39,7 @@
 - [2229. Check if an Array Is Consecutive](/LeetCode/2229_Check_if_an_Array_Is_Consecutive.swift)
 - [2239. Find Closest Number to Zero](/LeetCode/2239_Find_Closest_Number_to_Zero.swift)
 - [2363. Merge Similar Items](/LeetCode/2363_Merge_Similar_Items.swift)
-- [496. Next Greater Element I](/LeetCode/main.swift)
+- [925. Long Pressed Name](/LeetCode/main.swift)
 
 ## Programmers
 
