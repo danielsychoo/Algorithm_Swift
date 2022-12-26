@@ -1,0 +1,61 @@
+//
+//  Created by sungyeopTW on 2022/12/26.
+//
+
+// MARK: - Description
+
+/*
+ 58. Length of Last Word
+ 
+ Given a string s consisting of words and spaces, return the length of the last word in the string.
+
+ A word is a maximal substring consisting of non-space characters only.
+ 
+ Example 1:
+ Input: s = "Hello World"
+ Output: 5
+ Explanation: The last word is "World" with length 5.
+ 
+ Example 2:
+ Input: s = "   fly me   to   the moon  "
+ Output: 4
+ Explanation: The last word is "moon" with length 4.
+ 
+ Example 3:
+ Input: s = "luffy is still joyboy"
+ Output: 6
+ Explanation: The last word is "joyboy" with length 6.
+ */
+
+
+// MARK: - Inputs
+
+// example 1
+// let s = "Hello World"
+// let output = 5
+
+// example 2
+// let s = "   fly me   to   the moon  "
+// let output = 4
+
+// example 3
+// let s = "luffy is still joyboy"
+// let output = 6
+
+
+// MARK: - My Solution
+
+// func lengthOfLastWord(_ s: String) -> Int {
+//     let word = s.split(separator: " ").last
+//     return word?.count ?? 0
+// }
+
+
+// MARK: - Play
+
+// let result = lengthOfLastWord(s) == output
+// print("value:", lengthOfLastWord(s))
+// print("result:", result)
+
+
+// MARK: - Best practice
