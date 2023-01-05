@@ -14,6 +14,15 @@
 		041E7ED72963CD8900CE18CE /* 112_Path_Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E7ED62963CD8900CE18CE /* 112_Path_Sum.swift */; };
 		041E7EDB2963DBA700CE18CE /* 1736_Latest_Time_by_Replacing_Hidden_Digits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E7EDA2963DBA700CE18CE /* 1736_Latest_Time_by_Replacing_Hidden_Digits.swift */; };
 		041E7EDD296400B300CE18CE /* 1920_Build_Array_from_Permutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E7EDC296400B300CE18CE /* 1920_Build_Array_from_Permutation.swift */; };
+		041E7EDF2965100900CE18CE /* 1929_Concatenation_of_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E7EDE2965100900CE18CE /* 1929_Concatenation_of_Array.swift */; };
+		041E7EE129652A6B00CE18CE /* 1748_Sum_of_Unique_Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E7EE029652A6B00CE18CE /* 1748_Sum_of_Unique_Elements.swift */; };
+		041E7EE3296541B800CE18CE /* 2469_Convert_the_Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E7EE2296541B800CE18CE /* 2469_Convert_the_Temperature.swift */; };
+		041E7EE62965443B00CE18CE /* 2235_Add_Two_Integers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E7EE52965443B00CE18CE /* 2235_Add_Two_Integers.swift */; };
+		041E7EE82965450800CE18CE /* 2011_Final_Value_of_Variable_After_Performing_Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E7EE72965450800CE18CE /* 2011_Final_Value_of_Variable_After_Performing_Operations.swift */; };
+		041E7EEA296549DB00CE18CE /* 1480_Running_Sum_of_1d_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E7EE9296549DB00CE18CE /* 1480_Running_Sum_of_1d_Array.swift */; };
+		041E7EEC29654C7400CE18CE /* 1470_Shuffle_the_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E7EEB29654C7400CE18CE /* 1470_Shuffle_the_Array.swift */; };
+		041E7EEE29654EBD00CE18CE /* 1512_Number_of_Good_Pairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E7EED29654EBD00CE18CE /* 1512_Number_of_Good_Pairs.swift */; };
+		041E7EF029655FA300CE18CE /* 771_Jewels_and_Stones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E7EEF29655FA300CE18CE /* 771_Jewels_and_Stones.swift */; };
 		0437FD75282CA5A30097C584 /* 1_two_sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437FD74282CA5A30097C584 /* 1_two_sum.swift */; };
 		0437FD7E282DE3710097C584 /* 3_Longest_substring_without_repeating_characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437FD7D282DE3710097C584 /* 3_Longest_substring_without_repeating_characters.swift */; };
 		045E53D6288D35F50074BC56 /* 1243_Array_Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045E53D5288D35F50074BC56 /* 1243_Array_Transformation.swift */; };
@@ -82,6 +91,15 @@
 		041E7ED62963CD8900CE18CE /* 112_Path_Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 112_Path_Sum.swift; sourceTree = "<group>"; };
 		041E7EDA2963DBA700CE18CE /* 1736_Latest_Time_by_Replacing_Hidden_Digits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1736_Latest_Time_by_Replacing_Hidden_Digits.swift; sourceTree = "<group>"; };
 		041E7EDC296400B300CE18CE /* 1920_Build_Array_from_Permutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1920_Build_Array_from_Permutation.swift; sourceTree = "<group>"; };
+		041E7EDE2965100900CE18CE /* 1929_Concatenation_of_Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1929_Concatenation_of_Array.swift; sourceTree = "<group>"; };
+		041E7EE029652A6B00CE18CE /* 1748_Sum_of_Unique_Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1748_Sum_of_Unique_Elements.swift; sourceTree = "<group>"; };
+		041E7EE2296541B800CE18CE /* 2469_Convert_the_Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2469_Convert_the_Temperature.swift; sourceTree = "<group>"; };
+		041E7EE52965443B00CE18CE /* 2235_Add_Two_Integers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2235_Add_Two_Integers.swift; sourceTree = "<group>"; };
+		041E7EE72965450800CE18CE /* 2011_Final_Value_of_Variable_After_Performing_Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2011_Final_Value_of_Variable_After_Performing_Operations.swift; sourceTree = "<group>"; };
+		041E7EE9296549DB00CE18CE /* 1480_Running_Sum_of_1d_Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1480_Running_Sum_of_1d_Array.swift; sourceTree = "<group>"; };
+		041E7EEB29654C7400CE18CE /* 1470_Shuffle_the_Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1470_Shuffle_the_Array.swift; sourceTree = "<group>"; };
+		041E7EED29654EBD00CE18CE /* 1512_Number_of_Good_Pairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1512_Number_of_Good_Pairs.swift; sourceTree = "<group>"; };
+		041E7EEF29655FA300CE18CE /* 771_Jewels_and_Stones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 771_Jewels_and_Stones.swift; sourceTree = "<group>"; };
 		0437FD71282CA5A30097C584 /* Algorithm_Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm_Swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		0437FD74282CA5A30097C584 /* 1_two_sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_two_sum.swift; sourceTree = "<group>"; };
 		0437FD7D282DE3710097C584 /* 3_Longest_substring_without_repeating_characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_Longest_substring_without_repeating_characters.swift; sourceTree = "<group>"; };
@@ -142,6 +160,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041E7EE4296541FE00CE18CE /* 2401-2700 */ = {
+			isa = PBXGroup;
+			children = (
+				041E7EE2296541B800CE18CE /* 2469_Convert_the_Temperature.swift */,
+			);
+			path = "2401-2700";
+			sourceTree = "<group>";
+		};
 		0437FD68282CA5A30097C584 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +196,7 @@
 				04A2FF1B29597104006B2E8E /* 1501-1800 */,
 				04A2FF1C2959710D006B2E8E /* 1801-2100 */,
 				04A2FF1D29597115006B2E8E /* 2101-2400 */,
+				041E7EE4296541FE00CE18CE /* 2401-2700 */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -217,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				04C9398628C5C4FE00258B9D /* 617_Merge_Two_Binary_Trees.swift */,
+				041E7EEF29655FA300CE18CE /* 771_Jewels_and_Stones.swift */,
 				04C9399428C9AD9800258B9D /* 872_Leaf-Similar_Trees.swift */,
 				045E53D7288D4A900074BC56 /* 892_Surface_Area_of_3D_Shapes.swift */,
 			);
@@ -242,6 +270,8 @@
 				04B3C2D2286BDF8300EDC95E /* 1252_Cells_with_Odd_Values_in_a_Matrix.swift */,
 				04068DFF28B5C33B0078B252 /* 1275_Find_Winner_on_a_Tic_Tac_Toe_Game.swift */,
 				04FFA9C52884F9EC00EF7A87 /* 1431_Kids_With_the_Greatest_Number_of_Candies.swift */,
+				041E7EEB29654C7400CE18CE /* 1470_Shuffle_the_Array.swift */,
+				041E7EE9296549DB00CE18CE /* 1480_Running_Sum_of_1d_Array.swift */,
 			);
 			path = "1201-1500";
 			sourceTree = "<group>";
@@ -249,9 +279,11 @@
 		04A2FF1B29597104006B2E8E /* 1501-1800 */ = {
 			isa = PBXGroup;
 			children = (
+				041E7EED29654EBD00CE18CE /* 1512_Number_of_Good_Pairs.swift */,
 				04F9431D28A0850D00682F80 /* 1523_Count_Odd_Numbers_in_an_Interval_Range.swift */,
 				04A6AD30287082AD0017441E /* 1700_Number_of_Students_Unable_to_Eat_Lunch.swift */,
 				041E7EDA2963DBA700CE18CE /* 1736_Latest_Time_by_Replacing_Hidden_Digits.swift */,
+				041E7EE029652A6B00CE18CE /* 1748_Sum_of_Unique_Elements.swift */,
 			);
 			path = "1501-1800";
 			sourceTree = "<group>";
@@ -262,7 +294,9 @@
 				04F9431F28A0898B00682F80 /* 1805_Number_of_Different_Integers_in_a_String.swift */,
 				04C9398428C5C06100258B9D /* 1822_Sign_of_the_Product_of_an_Array.swift */,
 				041E7EDC296400B300CE18CE /* 1920_Build_Array_from_Permutation.swift */,
+				041E7EDE2965100900CE18CE /* 1929_Concatenation_of_Array.swift */,
 				04090EB828614518006F099B /* 1980_Find_Unique_Binary_String.swift */,
+				041E7EE72965450800CE18CE /* 2011_Final_Value_of_Variable_After_Performing_Operations.swift */,
 				04E6112B28459B5F006316AD /* 2027_Minimum_Moves_to_Convert_String.swift */,
 				04C9397028BF38BF00258B9D /* 2068_Check_Whether_Two_Strings_are_Almost_Equivalent.swift */,
 			);
@@ -274,6 +308,7 @@
 			children = (
 				04BC8CAC287ACE4A0008F27D /* 2210_Count_Hills_and_Valleys_in_an_Array.swift */,
 				04D6A97028D800C700CFEEF6 /* 2229_Check_if_an_Array_Is_Consecutive.swift */,
+				041E7EE52965443B00CE18CE /* 2235_Add_Two_Integers.swift */,
 				04C9398228C1BF5800258B9D /* 2239_Find_Closest_Number_to_Zero.swift */,
 				04C9399628C9AE9600258B9D /* 2363_Merge_Similar_Items.swift */,
 			);
@@ -352,18 +387,22 @@
 				04C9399728C9AE9600258B9D /* 2363_Merge_Similar_Items.swift in Sources */,
 				041E7ED72963CD8900CE18CE /* 112_Path_Sum.swift in Sources */,
 				04A2FF2229597416006B2E8E /* 69_Sqrt(x).swift in Sources */,
+				041E7EEE29654EBD00CE18CE /* 1512_Number_of_Good_Pairs.swift in Sources */,
 				04C9399A28C9C1B200258B9D /* 성격_유형_검사하기_(Lv.1)_2022_KAKAO_TECH_INTERNSHIP.swift in Sources */,
 				04BFACD92873B849000B66C0 /* 13_Roman_to_Integer.swift in Sources */,
 				04C9399528C9AD9800258B9D /* 872_Leaf-Similar_Trees.swift in Sources */,
 				04068DFE28B5B8840078B252 /* 349_Intersection_of_Two_Arrays.swift in Sources */,
+				041E7EE82965450800CE18CE /* 2011_Final_Value_of_Variable_After_Performing_Operations.swift in Sources */,
 				04E3698C28D15C530014EC31 /* 두_큐 합_같게_만들기_(Lv.2)_2022_KAKAO_TECH_INTERNSHIP.swift in Sources */,
 				04A2FF28295A97AC006B2E8E /* 88_Merge_Sorted_Array.swift in Sources */,
+				041E7EF029655FA300CE18CE /* 771_Jewels_and_Stones.swift in Sources */,
 				04F9432028A0898B00682F80 /* 1805_Number_of_Different_Integers_in_a_String.swift in Sources */,
 				04A2FF11295934CF006B2E8E /* 14_Longest_Common_Prefix.swift in Sources */,
 				04FFA9C62884F9EC00EF7A87 /* 1431_Kids_With_the_Greatest_Number_of_Candies.swift in Sources */,
 				04FFA9C42884F58A00EF7A87 /* 1119_Remove_Vowels_from_a_String.swift in Sources */,
 				041E7EDB2963DBA700CE18CE /* 1736_Latest_Time_by_Replacing_Hidden_Digits.swift in Sources */,
 				04A2FF20295971C8006B2E8E /* 58_Length_of_Last_Word.swift in Sources */,
+				041E7EEA296549DB00CE18CE /* 1480_Running_Sum_of_1d_Array.swift in Sources */,
 				04DE03B8284DD81000407F11 /* 9_Palindrome_Number.swift in Sources */,
 				04A2FF242959767A006B2E8E /* 70_Climbing_Stairs.swift in Sources */,
 				04A2FF2A295AA97B006B2E8E /* 100_Same_Tree.swift in Sources */,
@@ -372,6 +411,7 @@
 				045E53D8288D4A900074BC56 /* 892_Surface_Area_of_3D_Shapes.swift in Sources */,
 				04D6A97128D800C700CFEEF6 /* 2229_Check_if_an_Array_Is_Consecutive.swift in Sources */,
 				04C9399128C980DF00258B9D /* 104_Maximum_Depth_of_Binary_Tree.swift in Sources */,
+				041E7EEC29654C7400CE18CE /* 1470_Shuffle_the_Array.swift in Sources */,
 				04090EBB2861560A006F099B /* 1017_Convert_to_Base_-2.swift in Sources */,
 				04A2FF1529594CDC006B2E8E /* 21_Merge_Two_Sorted_Lists.swift in Sources */,
 				04D6A98328DD45C800CFEEF6 /* 925_Long_Pressed_Name.swift in Sources */,
@@ -386,6 +426,7 @@
 				04C9396F28BF366900258B9D /* 111_Minimum_Depth_of_Binary_Tree.swift in Sources */,
 				04E9CB992875044C00EADBF9 /* 12_Integer_to_Roman.swift in Sources */,
 				04B3C2C4286A865900EDC95E /* 1232_Check_If_It_Is_a_Straight_Line.swift in Sources */,
+				041E7EDF2965100900CE18CE /* 1929_Concatenation_of_Array.swift in Sources */,
 				04D6A97328D8031F00CFEEF6 /* 496_Next_Greater_Element_I.swift in Sources */,
 				04068E0028B5C33B0078B252 /* 1275_Find_Winner_on_a_Tic_Tac_Toe_Game.swift in Sources */,
 				04BC8CAF287AE2E10008F27D /* 67_Add_Binary.swift in Sources */,
@@ -397,7 +438,10 @@
 				04C9398528C5C06100258B9D /* 1822_Sign_of_the_Product_of_an_Array.swift in Sources */,
 				04C9399328C9944900258B9D /* 270_Closest_Binary_Search_Tree_Value.swift in Sources */,
 				04D6A96728D1945900CFEEF6 /* 진행중_등산코스 정하기 (Lv.3) -- 2022 KAKAO TECH INTERNSHIP.swift in Sources */,
+				041E7EE3296541B800CE18CE /* 2469_Convert_the_Temperature.swift in Sources */,
 				0437FD75282CA5A30097C584 /* 1_two_sum.swift in Sources */,
+				041E7EE129652A6B00CE18CE /* 1748_Sum_of_Unique_Elements.swift in Sources */,
+				041E7EE62965443B00CE18CE /* 2235_Add_Two_Integers.swift in Sources */,
 				04ED19A1283711D900F209C5 /* 136_Single_Number.swift in Sources */,
 				041E7EDD296400B300CE18CE /* 1920_Build_Array_from_Permutation.swift in Sources */,
 				04B9F6772835D43B00D0AEBC /* 4_Median_of_Two_Sorted_Arrays.swift in Sources */,
